@@ -1,0 +1,622 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Foodie's Corner - Premium Convenience &amp; Fast Casual Dining</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffdbcf",
+                        "tertiary-container": "#0071e9",
+                        "on-background": "#1c1c19",
+                        "on-tertiary-fixed": "#001a40",
+                        "secondary-fixed-dim": "#9acbff",
+                        "tertiary-fixed-dim": "#acc7ff",
+                        "outline-variant": "#e2bfb3",
+                        "inverse-on-surface": "#f3f0eb",
+                        "warm-white": "#FDFCFB",
+                        "secondary-container": "#60b4ff",
+                        "on-primary-fixed": "#380d00",
+                        "inverse-surface": "#31302d",
+                        "primary-fixed-dim": "#ffb59a",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f0ede8",
+                        "charcoal-glass": "#1A1A1A",
+                        "on-primary-fixed-variant": "#802a00",
+                        "secondary": "#00629e",
+                        "surface-bright": "#fcf9f4",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#cd4700",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-container": "#fefcff",
+                        "surface-tint": "#a83900",
+                        "surface-container-high": "#ebe8e3",
+                        "on-primary": "#ffffff",
+                        "outline": "#8e7166",
+                        "on-surface-variant": "#5a4138",
+                        "tertiary": "#0059ba",
+                        "surface-variant": "#e5e2dd",
+                        "limestone": "#E5E0D8",
+                        "surface": "#fcf9f4",
+                        "inverse-primary": "#ffb59a",
+                        "on-surface": "#1c1c19",
+                        "tertiary-fixed": "#d7e2ff",
+                        "on-secondary-fixed-variant": "#004a79",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dcdad5",
+                        "background": "#fcf9f4",
+                        "on-tertiary-fixed-variant": "#004492",
+                        "on-error": "#ffffff",
+                        "timber-brown": "#5D4037",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2dd",
+                        "surface-container-low": "#f6f3ee",
+                        "secondary-fixed": "#cfe5ff",
+                        "error": "#ba1a1a",
+                        "primary": "#a43700",
+                        "on-secondary-fixed": "#001d34",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#004470",
+                        "foodies-orange": "#DD4F05",
+                        "pale-sky-blue": "#E0F2F7",
+                        "soft-mint-green": "#E8F5E9",
+                        "warm-peach": "#FFF3E0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "stack-md": "24px",
+                        "container-margin": "20px",
+                        "base": "4px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Dynamic Header Scroll Behavior */
+        .header-container {
+            transition: transform 0.3s ease-in-out;
+            will-change: transform;
+        }
+        .header-hidden {
+            transform: translateY(-100%);
+        }
+
+        .hero-text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Utility Bar & Navigation Wrapper for Dynamic Scroll -->
+<div class="header-container fixed top-0 left-0 w-full z-50" id="sticky-header-wrapper">
+<!-- Top Utility Bar -->
+<div class="bg-timber-brown text-warm-white py-2 px-container-margin hidden md:block">
+<div class="max-w-7xl mx-auto flex justify-end items-center font-label-sm text-label-sm">
+<div class="flex items-center gap-6">
+<a class="hover:text-primary-fixed transition-colors" href="index.html">About Us</a>
+<a class="hover:text-primary-fixed transition-colors" href="careers.html">Careers</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+<!-- Main Navigation (TopNavBar Component) -->
+<header class="bg-surface/90 backdrop-blur-md border-b border-limestone shadow-sm w-full">
+<div class="flex flex-col w-full max-w-7xl mx-auto px-container-margin py-4">
+<div class="flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex-shrink-0" href="index.html">
+<img alt="Foodie's Corner Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3kwKt5BS58FWcjnzMqTO1LpptqoERqpH6qxAZVYTRRjQyq5owhbwf_nPFWVanuvqZXvLTEuna5TcPQc7UwOrtnhaXdAEeTvv5CW43g6Ajzb8YDljSZh001uY7oRRS8SluYNpiKI5AEQGIQwacSi7f4wjlcOVpscDUGMaK7IJcuYJYRutMTenTosxan3N4XTl0xrIIfJWHi5b9GYoF3W4yMIr36F0Fb_dBEYCWAYycNhRnisWJd3pr3x-5QDSFVwxBSTpqqahNeNEVIA">
+</a>
+<!-- Desktop Navigation & Actions -->
+<div class="hidden md:flex items-center gap-8">
+<nav aria-label="Main Navigation" class="flex items-center gap-8">
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="#picante">Food</a>
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="#merchandise">Merch</a>
+</nav>
+<a class="bg-foodies-orange text-warm-white font-label-md text-label-md px-6 py-3 rounded hover:bg-primary-container transition-colors shadow-sm inline-flex items-center gap-2" href="#locations">
+                        Find a Store
+                    </a>
+</div>
+<!-- Mobile Menu Button -->
+<button aria-label="Open Menu" class="md:hidden text-on-surface p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+</div>
+<!-- Spacer to prevent content from jumping under fixed header -->
+<div class="h-16 md:h-28"></div>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] md:h-[700px] overflow-hidden flex items-end pb-12 md:pb-24">
+<div class="absolute inset-0 z-0">
+<img alt="Modern architectural exterior of Foodie's Corner store" class="w-full h-full object-cover object-center" src="assets/Facade Pic 2.PNG">
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-container-margin">
+<h1 class="leading-tight flex flex-col max-w-3xl hero-text-shadow">
+<span class="font-display-lg text-[40px] md:text-[56px] text-white font-bold tracking-tight">Fueling Connections,</span>
+<span class="font-display-lg text-[40px] md:text-[56px] text-white font-bold tracking-tight mt-1">Elevating Experience</span>
+</h1>
+</div>
+</section>
+<!-- Store Locator Section -->
+<section class="py-stack-lg bg-surface" id="locations"><div class="max-w-7xl mx-auto px-container-margin">
+<!-- Row 1: Text and Map Split -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+<!-- Left: Text Block -->
+<div class="flex flex-col">
+<h3 class="font-label-md text-foodies-orange font-bold uppercase tracking-wider mb-2">FIND A FOODIE'S CORNER</h3>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-4 font-bold">We're right <span class="text-foodies-orange">around</span> the corner</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">All locations carry fresh food, premium gas, and everything your road trip needs.</p>
+</div>
+<!-- Right: Map Area with Floating Button -->
+<div class="relative rounded-2xl overflow-hidden h-[400px] border border-limestone shadow-sm">
+<img alt="Map of Central Texas locations" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd17ND3vNPbc_HD56KnOPzDeown-YqgEgMU39qLbHq4pibTvmwNY8hoI2yiI22_yyioxqA8RhEt23slviB72e9ixR7AJhHf88W6UMrtvYgbQBw3PN5xgE9zdf9uHsz8BOwuSZfqmo4nE6EGCwrI-_DMMII_vCSjb03SFUvETr_6iFoeEV3wYk8oNpeRNkVJunuWzMmFe6kPnrdvAuVK9eqcpIQDJWbi4NIieUn3GNVkCekWm0BG2KkHioUEUIBNeoBApnJc2UoHxuH5Q">
+<div class="absolute top-4 right-4 z-10">
+<a class="inline-flex items-center justify-center border-2 border-foodies-orange bg-white/90 backdrop-blur-sm text-foodies-orange font-bold rounded-full px-6 py-2 hover:bg-foodies-orange hover:text-white transition-colors shadow-md" href="locations.html">
+                    View on MAP
+                </a>
+</div>
+</div>
+</div>
+<!-- Row 2: Horizontal Carousel -->
+<div class="relative w-full">
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 custom-scrollbar scroll-smooth" id="locations-carousel">
+<!-- Location Card 1 -->
+<div class="snap-start shrink-0 w-[300px] border-2 border-timber-brown rounded-xl overflow-hidden flex flex-col bg-white">
+<div class="bg-foodies-orange p-4 h-[100px] flex items-center">
+<h3 class="font-headline-md text-headline-md text-white font-bold leading-tight">Foodies Corner / Cedar Park</h3>
+</div>
+<div class="p-6 flex flex-col gap-4 flex-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">location_on</span>
+<p class="font-body-md text-body-md text-on-surface-variant">1410 W Whitestone Blvd,<br>Cedar Park, TX 78613</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">schedule</span>
+<p class="font-body-md text-body-md text-on-surface-variant">M-Sat: 5:00am-11:00pm<br>Sun: 6:00am-11:00pm</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">call</span>
+<p class="font-body-md text-body-md text-on-surface-variant">(512) 331-5579</p>
+</div>
+<div class="mt-4 border-t border-limestone pt-4 flex-1">
+<img alt="Amenities" class="w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2fxbuCEMAr37AVUfPBHOgmcgWQ_wBqz_FcNafy25AN9ayjG4W2gJPlen9Z4qHnw74zE-C0Cfda_myhN1nyXbu_oIQ4P18TSTQved0dqwyF3fGEJS7gzdNnNU9VcdaLPOt4z47oK_ty-3cqKqH318SRQTRIyu9TW6wy87bRJS6VtNBiLnej63jcebFzUcpfckkeyy3EYsAV1aGB_TyqkbuZhip7jEQwDqZ2RyTH0pl3X2WFeSa1b0CBM_urQNKRJzcfV9k5Cut4M">
+</div>
+<a class="block text-center w-full bg-foodies-orange text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors mt-4" href="locations.html">Get Directions</a>
+</div>
+</div>
+<!-- Location Card 2 -->
+<div class="snap-start shrink-0 w-[300px] border-2 border-timber-brown rounded-xl overflow-hidden flex flex-col bg-white">
+<div class="bg-foodies-orange p-4 h-[100px] flex items-center">
+<h3 class="font-headline-md text-headline-md text-white font-bold leading-tight">HWY 71</h3>
+</div>
+<div class="p-6 flex flex-col gap-4 flex-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">location_on</span>
+<p class="font-body-md text-body-md text-on-surface-variant">8225 State Hwy 71 W,<br>Austin, TX 78735</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">schedule</span>
+<p class="font-body-md text-body-md text-on-surface-variant">M-F 6am-12am<br>Sat 6am-1am<br>Sun 7am-12am</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">call</span>
+<p class="font-body-md text-body-md text-on-surface-variant">(512) 992-0273</p>
+</div>
+<div class="mt-4 border-t border-limestone pt-4 flex-1">
+<img alt="Amenities" class="w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2fxbuCEMAr37AVUfPBHOgmcgWQ_wBqz_FcNafy25AN9ayjG4W2gJPlen9Z4qHnw74zE-C0Cfda_myhN1nyXbu_oIQ4P18TSTQved0dqwyF3fGEJS7gzdNnNU9VcdaLPOt4z47oK_ty-3cqKqH318SRQTRIyu9TW6wy87bRJS6VtNBiLnej63jcebFzUcpfckkeyy3EYsAV1aGB_TyqkbuZhip7jEQwDqZ2RyTH0pl3X2WFeSa1b0CBM_urQNKRJzcfV9k5Cut4M">
+</div>
+<a class="block text-center w-full bg-foodies-orange text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors mt-4" href="locations.html">Get Directions</a>
+</div>
+</div>
+<!-- Location Card 3 -->
+<div class="snap-start shrink-0 w-[300px] border-2 border-timber-brown rounded-xl overflow-hidden flex flex-col bg-white">
+<div class="bg-foodies-orange p-4 h-[100px] flex items-center">
+<h3 class="font-headline-md text-headline-md text-white font-bold leading-tight">West Campus/ Rio Grande</h3>
+</div>
+<div class="p-6 flex flex-col gap-4 flex-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">location_on</span>
+<p class="font-body-md text-body-md text-on-surface-variant">2400 Rio Grande St,<br>Austin, TX 78705</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">schedule</span>
+<p class="font-body-md text-body-md text-on-surface-variant">M-Sun 7am-12am</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">call</span>
+<p class="font-body-md text-body-md text-on-surface-variant">(512) 473-2880</p>
+</div>
+<div class="mt-4 border-t border-limestone pt-4 flex-1">
+<img alt="Amenities" class="w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2fxbuCEMAr37AVUfPBHOgmcgWQ_wBqz_FcNafy25AN9ayjG4W2gJPlen9Z4qHnw74zE-C0Cfda_myhN1nyXbu_oIQ4P18TSTQved0dqwyF3fGEJS7gzdNnNU9VcdaLPOt4z47oK_ty-3cqKqH318SRQTRIyu9TW6wy87bRJS6VtNBiLnej63jcebFzUcpfckkeyy3EYsAV1aGB_TyqkbuZhip7jEQwDqZ2RyTH0pl3X2WFeSa1b0CBM_urQNKRJzcfV9k5Cut4M">
+</div>
+<a class="block text-center w-full bg-foodies-orange text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors mt-4" href="locations.html">Get Directions</a>
+</div>
+</div>
+<!-- Location Card 4 -->
+<div class="snap-start shrink-0 w-[300px] border-2 border-timber-brown rounded-xl overflow-hidden flex flex-col bg-white">
+<div class="bg-foodies-orange p-4 h-[100px] flex items-center">
+<h3 class="font-headline-md text-headline-md text-white font-bold leading-tight">Leander</h3>
+</div>
+<div class="p-6 flex flex-col gap-4 flex-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">location_on</span>
+<p class="font-body-md text-body-md text-on-surface-variant">11340 TX-183A Toll Rd,<br>Leander, TX 78641</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">schedule</span>
+<p class="font-body-md text-body-md text-on-surface-variant">M-Sun 5am-12am</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">call</span>
+<p class="font-body-md text-body-md text-on-surface-variant">(512) 456-7448</p>
+</div>
+<div class="mt-4 border-t border-limestone pt-4 flex-1">
+<img alt="Amenities" class="w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2fxbuCEMAr37AVUfPBHOgmcgWQ_wBqz_FcNafy25AN9ayjG4W2gJPlen9Z4qHnw74zE-C0Cfda_myhN1nyXbu_oIQ4P18TSTQved0dqwyF3fGEJS7gzdNnNU9VcdaLPOt4z47oK_ty-3cqKqH318SRQTRIyu9TW6wy87bRJS6VtNBiLnej63jcebFzUcpfckkeyy3EYsAV1aGB_TyqkbuZhip7jEQwDqZ2RyTH0pl3X2WFeSa1b0CBM_urQNKRJzcfV9k5Cut4M">
+</div>
+<a class="block text-center w-full bg-foodies-orange text-white font-bold py-3 rounded-lg hover:bg-primary-container transition-colors mt-4" href="locations.html">Get Directions</a>
+</div>
+</div>
+<!-- Location Card 5 - Under Construction -->
+<div class="snap-start shrink-0 w-[300px] border-2 border-outline-variant rounded-xl overflow-hidden flex flex-col bg-surface-container-lowest opacity-70">
+<div class="bg-[#F0CBB6] p-4 h-[100px] flex items-center">
+<h3 class="font-headline-md text-headline-md text-timber-brown font-bold leading-tight">Liberty Hill</h3>
+</div>
+<div class="p-6 flex flex-col gap-4 flex-1 relative">
+<div class="absolute top-2 right-2 bg-timber-brown text-white text-[10px] font-bold px-2 py-1 rounded">UNDER CONSTRUCTION</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">location_on</span>
+<p class="font-body-md text-body-md text-on-surface-variant">1487 US 183,<br>Liberty Hill, TX 78642</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">schedule</span>
+<p class="font-body-md text-body-md text-on-surface-variant">M-Sun 5am-11pm</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-timber-brown mt-1">call</span>
+<p class="font-body-md text-body-md text-on-surface-variant">N/A</p>
+</div>
+<div class="mt-4 border-t border-limestone pt-4 flex-1 grayscale opacity-50">
+<img alt="Amenities" class="w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2fxbuCEMAr37AVUfPBHOgmcgWQ_wBqz_FcNafy25AN9ayjG4W2gJPlen9Z4qHnw74zE-C0Cfda_myhN1nyXbu_oIQ4P18TSTQved0dqwyF3fGEJS7gzdNnNU9VcdaLPOt4z47oK_ty-3cqKqH318SRQTRIyu9TW6wy87bRJS6VtNBiLnej63jcebFzUcpfckkeyy3EYsAV1aGB_TyqkbuZhip7jEQwDqZ2RyTH0pl3X2WFeSa1b0CBM_urQNKRJzcfV9k5Cut4M">
+</div>
+<button class="w-full bg-outline-variant text-timber-brown font-bold py-3 rounded-lg cursor-not-allowed mt-4">Get Directions</button>
+</div>
+</div>
+</div>
+<!-- Navigation Arrows -->
+<button aria-label="Scroll left" class="absolute -left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur shadow-lg rounded-full p-3 text-timber-brown hover:text-foodies-orange z-10 hidden md:block border border-limestone" onclick="document.getElementById('locations-carousel').scrollBy({left: -320, behavior: 'smooth'})">
+<span class="material-symbols-outlined text-3xl">chevron_left</span>
+</button>
+<button aria-label="Scroll right" class="absolute -right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur shadow-lg rounded-full p-3 text-timber-brown hover:text-foodies-orange z-10 hidden md:block border border-limestone" onclick="document.getElementById('locations-carousel').scrollBy({left: 320, behavior: 'smooth'})">
+<span class="material-symbols-outlined text-3xl">chevron_right</span>
+</button>
+</div>
+</div></section>
+<!-- Picante Deli Section -->
+<section class="py-stack-lg bg-warm-white relative overflow-hidden border-t border-limestone" id="picante">
+<div class="max-w-7xl mx-auto px-container-margin relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Text and Tabs (40%) -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<h3 class="font-label-md text-foodies-orange font-bold uppercase tracking-wider mb-2">DELI</h3>
+<h2 class="font-display-lg text-display-lg text-on-surface font-bold mb-6">Fuel your <span class="text-foodies-orange">Appetite</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">We offer fresh in house made food, grab &amp; go items, snacks and beverages at all locations. Your perfect one stop shop.</p>
+<div class="flex flex-col gap-4 pl-6 border-l-4 border-limestone"><h3 class="font-headline-md text-[24px] text-foodies-orange font-bold">Tacos</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Burritos</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Bowls</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Burgers</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Pizza</h3></div>
+<div class="mt-10">
+<a class="inline-flex items-center gap-2 font-bold text-headline-md text-primary border-2 border-primary bg-white px-10 py-4 rounded hover:bg-primary hover:text-primary-fixed transition-colors" href="deli.html">View Full Menu</a>
+</div>
+</div>
+<!-- Featuring and Grid (60%) -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<div class="flex flex-col items-center gap-6 p-8"><h3 class="text-3xl text-primary font-bold text-center italic">Featuring</h3><div class="w-[300px] md:w-[400px] h-auto"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvFF1Qbf2x1BKQsnVzPEMa4tAkIJkHqrPOh9KHx964pCzxgLjpSYDPfQWgFYsBDxsRzl6OdIUM-pvsZdEKpxj3VmYN3XaBluW3YWX7zjqsD092Wx24uwd_yoWc7Wb4fhwYaRo4oe7BeCJGt1BNzEf1FKHuMGSzOQDBmm7i2epbeskxAc251ZAr1t8ue8oZws0KWZfccihePtjP6B82AkY1jBV2bNpetchfV86Cw5xrb_yLu-RG_fiasJMZgrLXB0Vh_Gu1pSLR6uYPMA" alt="Picante Logo" class="w-full h-auto object-contain mx-auto"></div><div class="px-6 py-2 rounded-full text-label-md font-bold shadow-sm" style="background-color: rgb(230, 138, 0); color: rgb(153, 27, 27);">*Available at Select locations</div></div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px]">
+<div class="col-span-2 row-span-2 rounded-xl overflow-hidden relative group">
+<img alt="Premium Street Tacos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUQNIHDfRiHAKRINTxwMVcZjqndGoF0jwRqS6UYqh_RFkDV3NB9VzyzshVjqjYGGcbjBsBJyi-nCfQN7ZkVHovY_sc1G9jEcBausAy6HRAsiXCHMyyykpCAd7Hf7JRNiQIryA_QwvhMDbT2FBSuz0D5Bc2Uo8mjKWmT51XTyJWFgZ_V936Kd3MuFbOfch_d5Dv2i7IzpNOg-2iTLmPthQCuVJ8zRKy12jV6351mJ1BOQsDhWtp5Vi4k-TnWAF9_Z7qFlGdxLcNncc">
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+<img alt="Fresh Salsa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDygFGIsHeNbwUvXinp6xxvuwceIUpIZ-wLRNaJ8hrwIaNCle6S3lAHLJnKJZ99CO01oQNBVMJwgbGdz7MeTHMGDV-xpbkUzH8USdKOYcHmFNHDVZR1EmLzwgCPsBt54Ffkyucxq1Fvx8OaLc6jHJPIubXgkaoO1HlQ__RgViNO3XIUS9237akEkOpyf4OPY_T4m_LlkqrSuTAM7D45_FR0i4dXF9gZhMG7p2GwauEb-nYnVV6Cd7uPKohu8IAqTd7GySSdBfehA9s">
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+<img alt="Grilled Vegetables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa6ibt7WTzw9zEWi2yRl0rYBn_TImmGMsajHkLFJ4l6mnoI9vEaMO0-YKu04HxIddvYMo-KWsIWbXQp4eKL8Q-nKz0Ay9MS3Odlo5WskBBjldsji3Ba1J24JYlNrH8EsLeq5ac5DVl6AH7HzZYTzgMBt9CtxMhvNprJHLvPtn-6TEdLnSCFNQOQEDel1H8yZiX9tZcYEMrAWdTR2_wbpcyGZ0KYUDG5qjWt8_gUeah8ti6n0YdfgwYktZO44peJ-UzSBLYiUwqzJA">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Foodies Section -->
+<section class="py-stack-lg bg-surface-container-low border-t border-limestone">
+<div class="max-w-7xl mx-auto px-container-margin">
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-display-lg text-on-surface mb-2 font-bold">Why Foodies Corner...</h2>
+<p class="font-headline-md text-headline-md text-on-surface-variant font-bold">We're more than <span class="text-foodies-orange">just Gas</span></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="bg-surface p-6 rounded-xl shadow-sm border border-outline/10 flex flex-col gap-4">
+<span class="material-symbols-outlined text-foodies-orange text-4xl">restaurant</span>
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold">Deli at every stop</h3>
+<p class="font-body-md text-on-surface-variant">Every Foodie's Corner location has a real deli â€” not a microwave rack. Fresh-made food you'd actually order twice.</p>
+</div>
+<div class="bg-surface p-6 rounded-xl shadow-sm border border-outline/10 flex flex-col gap-4">
+<span class="material-symbols-outlined text-foodies-orange text-4xl">local_gas_station</span>
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold">Competitive Fuel Prices</h3>
+<p class="font-body-md text-on-surface-variant">We strive to give low gas prices. Foodie's Corner has Regular, Premium &amp; Diesel.</p>
+</div>
+<div class="bg-surface p-6 rounded-xl shadow-sm border border-outline/10 flex flex-col gap-4">
+<span class="material-symbols-outlined text-foodies-orange text-4xl">shopping_basket</span>
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold">Stocked Convenience</h3>
+<p class="font-body-md text-on-surface-variant">Snacks, fountain drinks, beers, wine, lottery, and all your essentials.</p>
+</div>
+<div class="bg-surface p-6 rounded-xl shadow-sm border border-outline/10 flex flex-col gap-4">
+<span class="material-symbols-outlined text-foodies-orange text-4xl">verified</span>
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold">20+ Years of Experience</h3>
+<p class="font-body-md text-on-surface-variant">We know what a gas station needs. We've taken our experience to bring you great fuel, great food and a worthwhile stop.</p>
+</div>
+<div class="bg-surface p-6 rounded-xl shadow-sm border border-outline/10 flex flex-col gap-4">
+<span class="material-symbols-outlined text-foodies-orange text-4xl">location_on</span>
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold">Growing Fast</h3>
+<p class="font-body-md text-on-surface-variant">New locations opening soon. We're expanding to bring Foodie's Corner to your corner.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Merchandise Section -->
+<section class="bg-pale-sky-blue overflow-hidden" id="merchandise">
+<div class="max-w-7xl mx-auto px-container-margin py-16 md:py-24 relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<h2 class="font-display-lg text-display-lg text-timber-brown mb-4 font-bold">Shop Our Online Store</h2>
+<p class="font-body-lg text-timber-brown/80 mb-8 max-w-md">Discover exclusive Foodie's Corner merchandise. High-quality apparel and accessories for the road ahead.</p>
+<a class="bg-foodies-orange text-white font-bold text-label-md px-8 py-4 rounded hover:bg-primary-container transition-colors shadow-sm inline-block" href="merch.html">
+                        View Merch
+                    </a>
+</div>
+<div class="relative h-[300px] md:h-[400px]">
+<!-- Floating items collage -->
+<div class="absolute top-0 right-10 w-48 md:w-64 transform rotate-12 hover:rotate-6 transition-transform duration-500 z-20 mix-blend-multiply">
+<img alt="Signature Trucker Hat" class="w-full h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCafcDzMNnAMWG0blPjEoLjR4bfKJhv-4oNRJmoYi2zoDhEjxabUzBAjNy98fAvZzf4JauH56DUxbQjd9Qi5lGsppMZdFLuwayyXlpt8wvAlnQ2Ti-NQXHLYlOeqwFemQ-yKjyMLVrtun7eVIYpjwRLjNfH6LxijrI_d8XRdxgGwWKC9mVCb6dVaX4WMJhr0AUP_Sc39-gRy3T9TjJ6ha_k8MibI8EXp05SqhiTDOB-MyC6zDLdzTOxJnItMv447Tdlp_IAqM9SuTs">
+</div>
+<div class="absolute bottom-0 left-0 md:-left-10 w-56 md:w-80 transform -rotate-6 hover:rotate-0 transition-transform duration-500 z-10 mix-blend-multiply">
+<img alt="Heritage Hoodie" class="w-full h-auto drop-shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOiRzsBlciAlgpyD4_dK7JrSKXjoy_Ntsc6N5eI00Bzgvjr61o0RIn65L_Pc0O28_jxLWcuoE0PXK0L86hJNJpEA9SJ7cgimBsr-lrjPwal1C7WaLFtqXvD6nFCelIS4-b826-yGco3VNfT88kgSUUHp1WZWiSvWeGK71jGjW9DsK12raS_Sq99wCh7U0n8TGg0vtBsFObd-ISJ5MAB2dxoM5fIwPCAHouQBdyhITEao_b__6OVIIkaQLdUsW0CZicN5WRXJ6FxwQ">
+</div>
+<div class="absolute top-1/4 right-0 w-32 md:w-48 transform -rotate-12 hover:-rotate-6 transition-transform duration-500 z-30 mix-blend-multiply">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Careers Section -->
+<section class="py-stack-lg bg-surface" id="careers">
+<div class="max-w-7xl mx-auto px-container-margin">
+<div class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-lg border border-outline/10">
+<div class="h-64 lg:h-auto">
+<img alt="Store Facade" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi1-PaSyjP4vHX7HaeuA1Sg_smXHkd3Se4cZgRWjb1IpNpYPzatq8EGCsD7T9fSvGwTt7RoVEEEUqkX462SH5xSooD_SO3a8WyN3CCA68qjSMvSgR2qMbyEJhPErVxO-HNTOMyWonI1DjReFGLkdb1jQ2IVjPj4h8dh1pHtIZbxy7y_aynBpGBOdY9dqxXO9rKSSqEv_zPXpc8Pwf5FB7ejQAS737MoT0CuUmtcLc1ON2tv4nrKXLw1B_V6uzGOBU36GKISgCwAB8">
+</div>
+<div class="bg-soft-mint-green p-10 md:p-16 flex flex-col justify-center items-start">
+<h2 class="font-display-lg text-display-lg text-timber-brown mb-4 font-bold">Join the Family.</h2>
+<p class="font-body-lg text-body-lg text-timber-brown/90 mb-8 max-w-md">Build a career with a brand that values quality, community, and growth.</p>
+<a class="bg-timber-brown text-warm-white font-bold text-label-md px-6 py-3 rounded hover:bg-surface-dim transition-colors shadow-sm inline-flex items-center gap-2" href="careers.html">
+                        Explore Open Positions
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-timber-brown dark:bg-charcoal-glass full-width bg-timber-brown border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-7xl mx-auto px-container-margin py-stack-lg md:gap-12 lg:grid-cols-5">
+<!-- Column 1: Brand & Copyright -->
+<div class="flex flex-col gap-6">
+<img alt="Foodie's Corner Logo" class="w-48 h-auto object-contain filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDawc76poWIdXfsabhbRgocIk14SyWpJILFqp8cOn4drWL8D5-_W0p4ShNvGTtVWTJKn7YJNAMKagL7VmlUytfGdZUDFaMRQs5NQYMYUygfgq75QnRfTFNwatatXt_ZSV59D1EhJFiOX-F_K8G0teeDCG8Wm9LF8u2H7_MTbu4uc-sxvUAwP_v1g9y7JcO-fVq-s76hVQ26wVcYiBbs2D6oQSfYdzV8u3gJpFY0I8dGctPBaq7PBmdM_mrPjLl7jA1U4yn_0weNSdk">
+<p class="font-body-md text-body-md text-warm-white/80 mt-2 max-w-xs">Premium Convenience &amp; Fresh Food. Elevating the everyday stop into an experience.</p>
+<p class="font-label-sm text-label-sm text-limestone/60 mt-auto">
+                    Â© 2024 Foodie's Corner. All rights reserved.
+                </p>
+</div>
+<!-- Column 2: Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Company</h4>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="index.html">About Us</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="careers.html">Careers</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Contact Us</a>
+</div>
+<!-- Column 3: Services -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Services</h4>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="locations.html">Locations</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="deli.html">Picante Deli</a>
+</div>
+<!-- Column 4: Legal -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Legal</h4>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Privacy Policy</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Follow Us</h4>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-2 text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all" href="#"><span class="material-symbols-outlined">photo_camera</span> @foodiescorner.tx</a>
+<a class="flex items-center gap-2 text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all" href="#"><span class="material-symbols-outlined">work</span> LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<style>
+    /* Custom scrollbar for the location list to keep it clean */
+    .custom-scrollbar::-webkit-scrollbar {
+        height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #E5E0D8; /* limestone */
+        border-radius: 10px;
+    }
+    .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+        background-color: #dcdad5; /* surface-dim */
+    }
+</style>
+<script>
+    // Header Scroll Behavior
+    let lastScrollY = window.scrollY;
+    const header = document.getElementById('sticky-header-wrapper');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 150) {
+            header.classList.add('header-hidden');
+        } else {
+            header.classList.remove('header-hidden');
+        }
+        lastScrollY = window.scrollY;
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Spacer to prevent content from being hidden behind sticky bottom nav on mobile -->
+<div class="h-20 md:hidden"></div>
+
+<!-- Mobile Sticky Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-limestone md:hidden">
+  <div class="flex justify-around items-center py-3 px-2">
+    <!-- Home -->
+    <a href="index.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-foodie-orange" style="font-variation-settings: 'FILL' 1;">home</span>
+      <span class="text-[11px] font-bold text-foodie-orange">Home</span>
+    </a>
+    <!-- Deli -->
+    <a href="deli.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">restaurant</span>
+      <span class="text-[11px] font-bold text-timber-brown">Deli</span>
+    </a>
+    <!-- Merch -->
+    <a href="merch.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+      <span class="text-[11px] font-bold text-timber-brown">Merch</span>
+    </a>
+    <!-- Stores -->
+    <a href="locations.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">location_on</span>
+      <span class="text-[11px] font-bold text-timber-brown">Stores</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-drawer-overlay" class="fixed inset-0 z-50 bg-[#1c1c19]/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+  <div id="mobile-drawer-panel" class="absolute top-0 right-0 h-full w-[280px] bg-[#fcf9f4] shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Header with Close Button -->
+    <div class="flex justify-between items-center mb-8">
+      <img alt="Foodie's Corner Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3kwKt5BS58FWcjnzMqTO1LpptqoERqpH6qxAZVYTRRjQyq5owhbwf_nPFWVanuvqZXvLTEuna5TcPQc7UwOrtnhaXdAEeTvv5CW43g6Ajzb8YDljSZh001uY7oRRS8SluYNpiKI5AEQGIQwacSi7f4wjlcOVpscDUGMaK7IJcuYJYRutMTenTosxan3N4XTl0xrIIfJWHi5b9GYoF3W4yMIr36F0Fb_dBEYCWAYycNhRnisWJd3pr3x-5QDSFVwxBSTpqqahNeNEVIA">
+      <button id="mobile-drawer-close" aria-label="Close Menu" class="text-timber-brown p-2 hover:opacity-80 transition-all">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    
+    <!-- Navigation Links -->
+    <nav class="flex flex-col gap-6 font-display-lg text-[22px] font-bold text-timber-brown flex-grow">
+      <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Home</a>
+      <a href="locations.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Locations</a>
+      <a href="deli.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Deli</a>
+      <a href="merch.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Merchandise</a>
+      <a href="careers.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Careers</a>
+    </nav>
+
+    <!-- Drawer Footer Actions -->
+    <div class="mt-auto">
+      <a href="locations.html" class="block w-full text-center bg-foodies-orange text-white font-bold py-4 rounded-lg hover:bg-primary-container transition-all">
+        Find a Store
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+    const overlay = document.getElementById('mobile-drawer-overlay');
+    const panel = document.getElementById('mobile-drawer-panel');
+
+    function openMenu() {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+    }
+
+    function closeMenu() {
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('translate-x-full');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeMenu();
+      });
+    }
+  });
+</script>
+
+</body></html>

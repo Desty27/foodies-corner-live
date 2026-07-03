@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careers | Foodie's Corner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f6f3ee",
+                        "tertiary": "#0059ba",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ebe8e3",
+                        "limestone": "#E5E0D8",
+                        "timber-brown": "#5D4037",
+                        "secondary-fixed-dim": "#9acbff",
+                        "inverse-primary": "#ffb59a",
+                        "secondary-fixed": "#cfe5ff",
+                        "tertiary-fixed-dim": "#acc7ff",
+                        "surface": "#fcf9f4",
+                        "on-background": "#1c1c19",
+                        "warm-white": "#FDFCFB",
+                        "on-tertiary-fixed": "#001a40",
+                        "on-secondary-fixed": "#001d34",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#60b4ff",
+                        "surface-bright": "#fcf9f4",
+                        "primary-fixed-dim": "#ffb59a",
+                        "primary-fixed": "#ffdbcf",
+                        "background": "#fcf9f4",
+                        "on-primary-fixed-variant": "#802a00",
+                        "primary": "#a43700",
+                        "on-primary-container": "#fffbff",
+                        "on-primary-fixed": "#380d00",
+                        "tertiary-fixed": "#d7e2ff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#0071e9",
+                        "secondary": "#00629e",
+                        "outline-variant": "#e2bfb3",
+                        "on-secondary-container": "#004470",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f3f0eb",
+                        "primary-container": "#cd4700",
+                        "surface-container": "#f0ede8",
+                        "outline": "#8e7166",
+                        "surface-variant": "#e5e2dd",
+                        "on-tertiary-fixed-variant": "#004492",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fefcff",
+                        "charcoal-glass": "#1A1A1A",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dcdad5",
+                        "inverse-surface": "#31302d",
+                        "on-surface": "#1c1c19",
+                        "surface-tint": "#a83900",
+                        "on-surface-variant": "#5a4138",
+                        "on-secondary-fixed-variant": "#004a79",
+                        "foodie-orange": "#DD4F05",
+                        "foodie-blue": "#0A7BC3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "gutter": "16px",
+                        "container-margin": "20px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #DD4F05 0%, #0A7BC3 50%, #DD4F05 100%);
+            box-shadow: 0 0 15px rgba(221, 79, 5, 0.3);
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform 1.5s ease-out;
+        }
+        .timeline-line.active {
+            transform: scaleY(1);
+        }
+        .job-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .job-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-warm-white text-timber-brown font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center justify-between px-container-margin h-20 max-w-[1280px] mx-auto relative">
+<div class="flex items-center gap-8">
+<img alt="Foodie's Corner Logo" class="w-auto object-contain h-16" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7fMHl3OB5Cp7HH23rrmugOBKbRWRGSsmcDL0vo-MxjfxWjoqOyKm7kcpALsIjeMzkfrUbh88OTn-DmjlJsXOQO1POkrdlXjydB24BhFtLWqQYv2MSyIeyPaqrLYi3eHQRWAyzGgIYa4BnVpJAi_YnNMXNIwA1aVAFU9yLjznt3wC8qj7VFR3nZXFR2ghAfgRAD9_HsxU-E_-sNNFMhmikfV3EPbVVK_D5pjy287S9yYbVGQVOtmUMOjynPPKIVFpcwz22bxkfkNA"/>
+</div>
+<nav class="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
+<a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="locations.html">Locations</a>
+<a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="deli.html">Deli</a>
+<a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="merch.html">Merchandise</a>
+<a class="font-display-lg text-body-md text-primary border-b-2 border-primary pb-1 font-bold" href="careers.html">Careers</a>
+</nav>
+<div class="flex items-center gap-6">
+<button aria-label="Open Menu" class="md:hidden text-on-surface p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, wide shot of a modern, upscale convenience store interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ0K9qXtIQejg1-8SYcZL3mtLkK2b2bpN6G-nTH93dFJVWNa50Ll02a83fmV-vdBqYftNj-2scM5fpwSSELF3wJewMRXSwyeNDg5lczMjw3L_Z-7suQ9nC0YOWzGrO9kOTJ7G03n4PTppD4DmAbHi3uQikSCHLYpje9uD95alzKNBi4-b4ISB1_9oSeOvHXFmHKQ_rg6hfQx_cn9OVEuORLzQijvC5bpmH24ZdW45GHaUIQQkCDzTXTNfDHWspIINEMhswUzMwSm8"/>
+<div class="absolute inset-0 bg-gradient-to-b from-timber-brown/60 via-timber-brown/40 to-warm-white"></div>
+</div>
+<div class="relative z-10 text-center px-container-margin max-w-4xl reveal active">
+<h1 class="font-display-lg text-display-lg text-white mb-stack-md drop-shadow-lg">
+            Join the Foodie's Corner Family
+        </h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-stack-lg max-w-2xl mx-auto">
+            Build a career where quality meets community. We're looking for passionate individuals to grow with us in a premium, fast-paced environment.
+        </p>
+<div class="glass p-2 rounded-full flex flex-col md:flex-row items-center gap-2 max-w-2xl mx-auto">
+<div class="flex items-center flex-1 w-full pl-6">
+<span class="material-symbols-outlined text-white/70">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder-white/70 w-full font-label-md" placeholder="Search City, State, or Role" type="text"/>
+</div>
+<button class="bg-[#DD4F05] text-white font-display-lg font-semibold px-8 py-4 rounded-full hover:bg-primary transition-all w-full md:w-auto shadow-lg active:scale-95">
+                Search Jobs
+            </button>
+</div>
+</div>
+</section>
+<!-- Positions Section -->
+<section class="py-stack-lg bg-surface-container-low overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-container-margin relative reveal active">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-lg text-timber-brown">Where You Fit In</h2>
+</div>
+<!-- Glowing Timeline Line -->
+<div class="space-y-stack-lg relative reveal-group"><!-- Row 1: Team Member -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 mb-12 reveal active" style="transition-delay: 0ms;"><a class="text-right group" href="team-member.html"><h3 class="font-display-lg text-headline-md text-timber-brown font-bold mb-2 group-hover:text-primary transition-colors">Team Member</h3><p class="text-on-surface-variant font-body-md leading-relaxed">Start your journey mastering the fundamentals of premium service and hospitality.</p></a><div class="flex justify-center"><div class="w-20 h-20 rounded-full bg-[#DD4F05] flex items-center justify-center shadow-lg"><svg class="w-12 h-12" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div></div><div class="bg-white p-6 py-3 rounded-lg shadow-sm border border-limestone"><h4 class="font-bold text-timber-brown mb-2">Responsibilities</h4><ul class="space-y-1 text-sm text-on-surface-variant mb-2"><li class="flex gap-2">• Greet customers warmly and assist with their needs</li><li class="flex gap-2">• Operate the POS register accurately</li></ul><div class="text-right"><a class="text-[#DD4F05] font-bold text-xs hover:underline" href="team-member.html">View Full Description ➔</a></div></div></div>
+<!-- Row 2: Assistant Manager -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 mb-12 reveal active" style="transition-delay: 150ms;"><a class="text-right group" href="assistant-manager.html"><h3 class="font-display-lg text-headline-md text-timber-brown font-bold mb-2 group-hover:text-primary transition-colors">Assistant Manager</h3><p class="text-on-surface-variant font-body-md leading-relaxed">Develop leadership skills and oversee daily operational excellence.</p></a><div class="flex justify-center"><div class="w-20 h-20 rounded-full bg-[#DD4F05] flex items-center justify-center shadow-lg"><svg class="w-12 h-12" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect height="4" rx="1" ry="1" width="8" x="8" y="2"></rect><path d="M9 12l2 2 4-4"></path></svg></div></div><div class="bg-white p-6 py-3 rounded-lg shadow-sm border border-limestone"><h4 class="font-bold text-timber-brown mb-2">Responsibilities</h4><ul class="space-y-1 text-sm text-on-surface-variant mb-2"><li class="flex gap-2">• Assist in overseeing all store operations</li><li class="flex gap-2">• Supervise and support team members during shifts</li></ul><div class="text-right"><a class="text-[#DD4F05] font-bold text-xs hover:underline" href="assistant-manager.html">View Full Description ➔</a></div></div></div>
+<!-- Row 3: Store Manager -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 mb-12 reveal active" style="transition-delay: 300ms;"><a class="text-right group" href="store-manager.html"><h3 class="font-display-lg text-headline-md text-timber-brown font-bold mb-2 group-hover:text-primary transition-colors">Store Manager</h3><p class="text-on-surface-variant font-body-md leading-relaxed">The Store Manager is responsible for the overall operation of Foodies Corner and is accountable for performance.</p></a><div class="flex justify-center"><div class="w-20 h-20 rounded-full bg-[#DD4F05] flex items-center justify-center shadow-lg"><svg class="w-12 h-12" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline><path d="M12 7l1.5 3 3.5.5-2.5 2.5.5 3.5-3-1.5-3 1.5.5-3.5-2.5-2.5 3.5-.5z"></path></svg></div></div><div class="bg-white p-6 py-3 rounded-lg shadow-sm border border-limestone"><h4 class="font-bold text-timber-brown mb-2">Responsibilities</h4><ul class="space-y-1 text-sm text-on-surface-variant mb-2"><li class="flex gap-2">• Coach and develop a team of managers and staff</li><li class="flex gap-2">• Oversee daily store and deli operations</li></ul><div class="text-right"><a class="text-[#DD4F05] font-bold text-xs hover:underline" href="store-manager.html">View Full Description ➔</a></div></div></div>
+<!-- Row 4: Deli / Kitchen Member -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 mb-12 reveal active" style="transition-delay: 450ms;"><a class="text-right group" href="deli-member.html"><h3 class="font-display-lg text-headline-md text-timber-brown font-bold mb-2 group-hover:text-primary transition-colors">Deli / Kitchen Member</h3><p class="text-on-surface-variant font-body-md leading-relaxed">Become a specialist in our craft kitchen, focusing on high-end culinary standards.</p></a><div class="flex justify-center"><div class="w-20 h-20 rounded-full bg-[#DD4F05] flex items-center justify-center shadow-lg"><svg class="w-12 h-12" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" x2="6" y1="1" y2="4"></line><line x1="10" x2="10" y1="1" y2="4"></line><line x1="14" x2="14" y1="1" y2="4"></line></svg></div></div><div class="bg-white p-6 py-3 rounded-lg shadow-sm border border-limestone"><h4 class="font-bold text-timber-brown mb-2">Responsibilities</h4><ul class="space-y-1 text-sm text-on-surface-variant mb-2"><li class="flex gap-2">• Prepare deli items and hot foods to order</li><li class="flex gap-2">• Follow all recipes and presentation standards consistently</li></ul><div class="text-right"><a class="text-[#DD4F05] font-bold text-xs hover:underline" href="deli-member.html">View Full Description ➔</a></div></div></div>
+<!-- Row 5: Deli / Kitchen Manager -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 reveal active" style="transition-delay: 600ms;"><a class="text-right group" href="deli-manager.html"><h3 class="font-display-lg text-headline-md text-timber-brown font-bold mb-2 group-hover:text-primary transition-colors">Deli / Kitchen Manager</h3><p class="text-on-surface-variant font-body-md leading-relaxed">The Deli/Kitchen Manager leads all food production and kitchen operations at Foodies Corner.</p></a><div class="flex justify-center"><div class="w-20 h-20 rounded-full bg-[#DD4F05] flex items-center justify-center shadow-lg"><svg class="w-12 h-12" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"></path><line x1="6" x2="18" y1="17" y2="17"></line></svg></div></div><div class="bg-white p-6 py-3 rounded-lg shadow-sm border border-limestone"><h4 class="font-bold text-timber-brown mb-2">Responsibilities</h4><ul class="space-y-1 text-sm text-on-surface-variant mb-2"><li class="flex gap-2">• Oversee daily kitchen operations and prep</li><li class="flex gap-2">• Lead and train deli staff to ensure efficiency</li></ul><div class="text-right"><a class="text-[#DD4F05] font-bold text-xs hover:underline" href="deli-manager.html">View Full Description ➔</a></div></div></div></div>
+</div>
+</section>
+<!-- Job Board -->
+<section class="py-stack-lg max-w-[1280px] mx-auto px-container-margin"><div class="flex items-end justify-between mb-stack-md reveal active">
+<div>
+<h2 class="font-display-lg text-headline-lg text-timber-brown">Available Roles</h2>
+<p class="text-on-surface-variant">Find your place in our growing family.</p>
+</div>
+<a class="text-[#0A7BC3] font-semibold hover:underline hidden md:block" href="careers.html">Browse all 42 jobs</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter reveal-group">
+<!-- Job 1 -->
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
+<div class="p-6 flex-1">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Team Member</h3>
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
+</div>
+<div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Austin, TX</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">payments</span>
+<span>Competitive + Bonus</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                Start your journey mastering the fundamentals of premium service and hospitality. You'll be the face of Foodie's Corner, ensuring every guest receives a warm welcome and exceptional service while maintaining our high standards of store presentation.
+            </p>
+</div>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="team-member.html">Apply Now</a>
+</div>
+<!-- Job 2 -->
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
+<div class="p-6 flex-1">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Assistant Manager</h3>
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
+</div>
+<div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Austin, TX</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">payments</span>
+<span>Competitive + Bonus</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                Develop leadership skills and oversee daily operational excellence. You will support the Store Manager in coaching team members, managing inventory, and driving sales while ensuring our premium brand standards are met in every interaction.
+            </p>
+</div>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="assistant-manager.html">Apply Now</a>
+</div>
+<!-- Job 3 -->
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
+<div class="p-6 flex-1">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Store Manager</h3>
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
+</div>
+<div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Austin, TX</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">payments</span>
+<span>Competitive + Bonus</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                The Store Manager is responsible for the overall operation of Foodie's Corner and is accountable for performance. You will lead a high-performing team, manage P&amp;L, and cultivate a community-focused culture that defines our premium convenience experience.
+            </p>
+</div>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="store-manager.html">Apply Now</a>
+</div>
+<!-- Job 4 -->
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
+<div class="p-6 flex-1">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Deli / Kitchen Member</h3>
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
+</div>
+<div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Austin, TX</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">payments</span>
+<span>Competitive + Bonus</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                Become a specialist in our craft kitchen, focusing on high-end culinary standards. You will prepare fresh, made-to-order deli items following precise recipes and presentation standards that set Foodie's Corner apart from traditional convenience stores.
+            </p>
+</div>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="deli-member.html">Apply Now</a>
+</div>
+</div>
+<div class="mt-stack-md md:hidden text-center reveal">
+<a class="text-[#0A7BC3] font-semibold hover:underline" href="careers.html">Browse all 42 jobs</a>
+</div></section>
+<!-- Footer -->
+<footer class="bg-timber-brown dark:bg-on-background text-warm-white reveal active">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-stack-lg px-container-margin py-stack-lg max-w-[1280px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<img alt="Foodie's Corner Logo" class="w-[140px] h-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGyZddY0VhRF0oXAlGPwo_X3nq20W4ixl67vyvkNf3KDMpCUCQvWBsdE27mcOTVBxprwY8zmhtbTkSCG9io7Pdb3YuOc0WTVXiq14MuBtwh3JHO8x1d77zKGlKS8oVz-K69-B5bSIH7cJpze2US2mY83achhA0N8CkEe2Fe9Xl1gbBjjPiFF2O2efmm7uroV0q_WVm8eWDcD-K41az-Zmwoh54zm7qSqpscifiUIMaX7f2h_9AJuhxN_xV46oH_LSI9nxYpzr8ehA" style="filter: brightness(0) invert(1);"/>
+<p class="text-limestone/80 text-body-md mb-6 max-w-xs">Premium Convenience &amp; Fresh Food. Elevating the everyday stop into an experience.</p>
+<div class="flex gap-4">
+<a class="text-limestone hover:text-white" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-limestone hover:text-white" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+<div class="space-y-4 md:ml-auto">
+<h4 class="font-bold text-lg mb-4">Company</h4>
+<ul class="space-y-2"><li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="index.html">About Us</a></li><li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="#">Press</a></li><li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="careers.html">Careers</a></li><li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="#">Sustainability</a></li></ul>
+</div>
+<div class="space-y-4 md:ml-auto">
+<h4 class="font-bold text-lg mb-4">Legal</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="#">Terms of Service</a></li>
+<li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div class="space-y-4 md:ml-auto">
+<h4 class="font-bold text-lg mb-4">Newsletter</h4>
+<p class="text-sm text-limestone/60">Get updates on new job openings.</p>
+<form class="flex gap-2">
+<input class="bg-white/10 border-white/20 text-white rounded p-2 flex-1 focus:ring-primary focus:ring-2" placeholder="Email" type="email"/>
+<button class="bg-[#DD4F05] px-4 py-2 rounded font-bold">JOIN</button>
+</form>
+</div><div class="space-y-4 md:ml-auto"><h4 class="font-bold text-lg mb-4">Follow Us</h4><div class="space-y-3"><a class="flex items-center gap-2 text-limestone/80 hover:text-warm-white transition-all" href="#"><span class="material-symbols-outlined text-xl">photo_camera</span><span class="text-sm italic">@foodiescorner.tx</span></a><a class="flex items-center gap-2 text-limestone/80 hover:text-warm-white transition-all" href="#"><span class="material-symbols-outlined text-xl">work</span><span class="text-sm">LinkedIn</span></a></div></div>
+</div>
+<div class="border-t border-white/10 py-8 px-container-margin max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-limestone/60 text-sm">© 2024 Foodie's Corner. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-limestone/80 text-sm hover:text-white" href="#">Cookies</a>
+<a class="text-limestone/80 text-sm hover:text-white" href="locations.html">Store Locator</a>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Intersection Observer for Reveal animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Staggered delay logic for groups
+                    const parent = entry.target.closest('.reveal-group');
+                    if (parent) {
+                        const siblings = Array.from(parent.querySelectorAll('.reveal'));
+                        const index = siblings.indexOf(entry.target);
+                        entry.target.style.transitionDelay = `${index * 150}ms`;
+                    }
+                    
+                    entry.target.classList.add('active');
+                    
+                    // Special case for timeline line
+                    if (entry.target.classList.contains('timeline-line')) {
+                        entry.target.classList.add('active');
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Elements to observe
+        const revealElements = document.querySelectorAll('.reveal, .timeline-line');
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Parallax Effect for Hero Image
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrollPos * 0.4}px)`;
+            }
+        });
+    });
+</script>
+
+<!-- Spacer to prevent content from being hidden behind sticky bottom nav on mobile -->
+<div class="h-20 md:hidden"></div>
+
+<!-- Mobile Sticky Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-limestone md:hidden">
+  <div class="flex justify-around items-center py-3 px-2">
+    <!-- Home -->
+    <a href="index.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">home</span>
+      <span class="text-[11px] font-bold text-timber-brown">Home</span>
+    </a>
+    <!-- Deli -->
+    <a href="deli.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">restaurant</span>
+      <span class="text-[11px] font-bold text-timber-brown">Deli</span>
+    </a>
+    <!-- Merch -->
+    <a href="merch.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+      <span class="text-[11px] font-bold text-timber-brown">Merch</span>
+    </a>
+    <!-- Stores -->
+    <a href="locations.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">location_on</span>
+      <span class="text-[11px] font-bold text-timber-brown">Stores</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-drawer-overlay" class="fixed inset-0 z-50 bg-[#1c1c19]/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+  <div id="mobile-drawer-panel" class="absolute top-0 right-0 h-full w-[280px] bg-[#fcf9f4] shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Header with Close Button -->
+    <div class="flex justify-between items-center mb-8">
+      <img alt="Foodie's Corner Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3kwKt5BS58FWcjnzMqTO1LpptqoERqpH6qxAZVYTRRjQyq5owhbwf_nPFWVanuvqZXvLTEuna5TcPQc7UwOrtnhaXdAEeTvv5CW43g6Ajzb8YDljSZh001uY7oRRS8SluYNpiKI5AEQGIQwacSi7f4wjlcOVpscDUGMaK7IJcuYJYRutMTenTosxan3N4XTl0xrIIfJWHi5b9GYoF3W4yMIr36F0Fb_dBEYCWAYycNhRnisWJd3pr3x-5QDSFVwxBSTpqqahNeNEVIA">
+      <button id="mobile-drawer-close" aria-label="Close Menu" class="text-timber-brown p-2 hover:opacity-80 transition-all">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    
+    <!-- Navigation Links -->
+    <nav class="flex flex-col gap-6 font-display-lg text-[22px] font-bold text-timber-brown flex-grow">
+      <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Home</a>
+      <a href="locations.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Locations</a>
+      <a href="deli.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Deli</a>
+      <a href="merch.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Merchandise</a>
+      <a href="careers.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Careers</a>
+    </nav>
+
+    <!-- Drawer Footer Actions -->
+    <div class="mt-auto">
+      <a href="locations.html" class="block w-full text-center bg-foodies-orange text-white font-bold py-4 rounded-lg hover:bg-primary-container transition-all">
+        Find a Store
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+    const overlay = document.getElementById('mobile-drawer-overlay');
+    const panel = document.getElementById('mobile-drawer-panel');
+
+    function openMenu() {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+    }
+
+    function closeMenu() {
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('translate-x-full');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeMenu();
+      });
+    }
+  });
+</script>
+
+</body></html>

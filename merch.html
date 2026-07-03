@@ -1,0 +1,279 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Merch &amp; Apparel - Foodie's Corner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#5a4138",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004492",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#ffb59a",
+                        "on-secondary-fixed": "#001d34",
+                        "primary-fixed": "#ffdbcf",
+                        "secondary-container": "#60b4ff",
+                        "surface-container-high": "#ebe8e3",
+                        "primary-fixed-dim": "#ffb59a",
+                        "on-secondary": "#ffffff",
+                        "limestone": "#E5E0D8",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#8e7166",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-secondary-fixed-variant": "#004a79",
+                        "surface-dim": "#dcdad5",
+                        "on-tertiary-fixed": "#001a40",
+                        "surface-variant": "#e5e2dd",
+                        "outline-variant": "#e2bfb3",
+                        "primary-container": "#cd4700",
+                        "background": "#fcf9f4",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#d7e2ff",
+                        "tertiary-fixed-dim": "#acc7ff",
+                        "timber-brown": "#5D4037",
+                        "surface-tint": "#a83900",
+                        "secondary-fixed-dim": "#9acbff",
+                        "charcoal-glass": "#1A1A1A",
+                        "surface-container-low": "#f6f3ee",
+                        "on-primary-fixed-variant": "#802a00",
+                        "inverse-surface": "#31302d",
+                        "surface-container": "#f0ede8",
+                        "surface": "#fcf9f4",
+                        "secondary-fixed": "#cfe5ff",
+                        "surface-bright": "#fcf9f4",
+                        "on-surface": "#1c1c19",
+                        "tertiary-container": "#0071e9",
+                        "inverse-on-surface": "#f3f0eb",
+                        "tertiary": "#0059ba",
+                        "secondary": "#00629e",
+                        "primary": "#a43700",
+                        "warm-white": "#FDFCFB",
+                        "on-tertiary-container": "#fefcff",
+                        "on-secondary-container": "#004470",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1c1c19",
+                        "on-primary-fixed": "#380d00",
+                        "pale-sky-blue": "#E3F2FD",
+                        "warm-peach": "#FFECB3",
+                        "soft-mint": "#E8F5E9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-lg": "48px",
+                        "stack-sm": "8px",
+                        "container-margin": "20px",
+                        "base": "4px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .lookbook-image-hover {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .lookbook-card:hover .lookbook-image-hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+        .lookbook-card:hover .lookbook-image-hover.delay-75 {
+             transform: scale(1.03) rotate(-3deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<div class="header-container fixed top-0 left-0 w-full z-50" id="sticky-header-wrapper"><div class="bg-timber-brown text-warm-white py-2 px-container-margin hidden md:block"><div class="max-w-7xl mx-auto flex justify-end items-center font-label-sm text-label-sm"><div class="flex items-center gap-6"><a class="hover:text-primary-fixed transition-colors" href="index.html">About Us</a><a class="hover:text-primary-fixed transition-colors" href="careers.html">Careers</a><a class="hover:text-primary-fixed transition-colors" href="#">Contact Us</a></div></div></div><header class="bg-surface/90 backdrop-blur-md border-b border-limestone shadow-sm w-full"><div class="flex flex-col w-full max-w-7xl mx-auto px-container-margin py-4"><div class="flex items-center justify-between"><a class="flex-shrink-0" href="index.html"><img alt="Foodie's Corner Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3kwKt5BS58FWcjnzMqTO1LpptqoERqpH6qxAZVYTRRjQyq5owhbwf_nPFWVanuvqZXvLTEuna5TcPQc7UwOrtnhaXdAEeTvv5CW43g6Ajzb8YDljSZh001uY7oRRS8SluYNpiKI5AEQGIQwacSi7f4wjlcOVpscDUGMaK7IJcuYJYRutMTenTosxan3N4XTl0xrIIfJWHi5b9GYoF3W4yMIr36F0Fb_dBEYCWAYycNhRnisWJd3pr3x-5QDSFVwxBSTpqqahNeNEVIA"></a><div class="hidden md:flex items-center gap-8"><nav aria-label="Main Navigation" class="flex items-center gap-8"><a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="index.html">Food</a><a class="text-primary text-[20px] font-bold font-headline-lg border-b-2 border-primary pb-1" href="merch.html">Merch</a></nav><a class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded hover:bg-primary-container transition-colors shadow-sm inline-flex items-center gap-2" href="locations.html">Find a Store</a></div><button aria-label="Open Menu" class="md:hidden text-on-surface p-2" id="mobile-menu-btn"><span class="material-symbols-outlined text-3xl">menu</span></button></div></div></header></div>
+<main class="w-full">
+<!-- 1. Dynamic Lifestyle Hero Section -->
+<section class="w-full min-h-[600px] bg-pale-sky-blue relative overflow-hidden flex items-center">
+<div class="max-w-7xl mx-auto px-container-margin w-full grid grid-cols-1 md:grid-cols-2 gap-stack-lg relative z-10 py-stack-lg">
+<div class="flex flex-col justify-center items-start space-y-6">
+<h1 class="font-display-lg text-display-lg text-timber-brown leading-tight">Rep the Corner.</h1>
+<p class="font-body-lg text-body-lg text-timber-brown/80 max-w-md">Premium apparel and everyday gear for the true Foodie's Corner fan.</p>
+<div class="bg-primary text-on-primary px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-widest shadow-sm inline-block">
+                        ONLINE SHOP COMING 2027
+                    </div>
+</div>
+<div class="relative h-[400px] md:h-full min-h-[400px] flex items-center justify-center">
+<!-- Overlapping collage of merchandise -->
+<div class="absolute w-64 h-64 top-10 left-10 transform -rotate-6 z-20 drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+<img class="w-full h-full object-contain filter drop-shadow-xl" data-alt="A high-quality product photography shot of a premium vintage-wash hoodie with the Foodie's Corner logo embroidered on the chest. The hoodie is neatly folded and floating on a pure white background with soft, studio lighting casting gentle shadows, highlighting the thick cotton texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX3d8WrfTMT9bS4s44OInnejxigxnFpzbnsmHbidT1y7twlVS1MS4Vku-fRzd9dQt3JcJnSswStnQTEyK5lKHRdBCKEKEMmoniRsMJEA9nWuu_yxg6TPtRrZ8mv8KyWikwm_Jaj__APwKYFcXHVVrASBzSkmrFP_mXEpJ7aYcRbeCVSHXeSdPiJR-4klFZZoBhAfgLSQ-zGQTlZfl_6lqfpcqZUyqB9xN6gI9Y3NaRrE3AjoyPlzJGv8WeATcvZAeYrF8oa84kIxM">
+</div>
+<div class="absolute w-56 h-56 bottom-10 right-10 transform rotate-12 z-30 drop-shadow-xl hover:scale-105 transition-transform duration-500 delay-75">
+<img class="w-full h-full object-contain filter drop-shadow-xl" data-alt="A clean, studio product shot of a stylish mesh trucker hat in earthy tones (brown and beige) featuring a subtle woven patch of the Foodie's Corner logo. The hat is angled slightly to show its profile, floating against a clean white backdrop, lit with crisp commercial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj0rAPeUMWUh7m2L_rgdXwaiLC3pLfyoHvGnFy9ZFTD0U06fMUd2M_sXC3zXSDhFw9QBRxGC8fsmmGt8ujtRvqfzVn_Lo84qAeHc8gmfKDRWTQdQ_xke-cU8as4Y4Xs0-GPrYiyCP-qBfRuzZury8p08E_uJHfYT77bToEgKKB3jE_St50myKZ2z-Yfu1fdvzQQe0EPcAeC6-oAJZf4Y0CYv8mVjz1wBjFjq8qyfqYexc0XS7jAnwBQgtupKTkrDTQvrAxmGOOGJY">
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Lookbook Ad Blocks -->
+<!-- Block 1 -->
+<section class="w-full bg-warm-peach py-24 lookbook-card overflow-hidden">
+<div class="max-w-7xl mx-auto px-container-margin grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<div class="md:col-span-5 relative h-[400px] flex items-center justify-center">
+<img class="w-[120%] h-auto object-contain absolute left-[-10%] lookbook-image-hover drop-shadow-2xl" data-alt="Two premium cotton sweatshirts, one a vintage wash hoodie and the other a classic crewneck, casually draped and slightly overlapping as if floating in mid-air. The lighting is soft and warm, emphasizing the cozy texture and high-quality construction of the apparel, set against a seamless pale peach background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvLZ-yswofGa24EYKT58AuTX4m8ylf6mXVnfi5ro2jwRw_zLvZMUjzEkz3aUbzCAQQsbAuHd8D8Ozc_DsLpoJrEjWH4L8DO7NsE7SKdDW9g19NubcbRgIJkbrmw8ufy2yjRWk9N594DdwALe2s8z0S1S2-OQ2cljGSqgJPLiSN1Kv5uJRb5HAINeOcGK8yFSwIMQRc3e450zRmYzwdtgWCcKLLQ9ovUYcjc6u8xoJ_bLpP1qcu28yJennjKvD6ymswjAxOCeRFBs4">
+</div>
+<div class="md:col-span-7 flex flex-col items-start space-y-6 md:pl-12">
+<h2 class="font-headline-lg text-headline-lg text-timber-brown">The Heritage Collection</h2>
+<p class="font-body-lg text-body-lg text-timber-brown/80">Heavyweight cotton, vintage washes, and our classic logo. Built for ultimate road trip comfort.</p>
+<span class="bg-warm-white text-timber-brown px-4 py-2 rounded-full font-label-md text-label-md shadow-sm border border-limestone inline-block">*Available In-Store</span>
+</div>
+</div>
+</section>
+<!-- Block 2 -->
+<section class="w-full bg-soft-mint py-24 lookbook-card overflow-hidden">
+<div class="max-w-7xl mx-auto px-container-margin grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<div class="md:col-span-7 flex flex-col items-start space-y-6 md:pr-12 order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg text-timber-brown">Everyday Essentials</h2>
+<p class="font-body-lg text-body-lg text-timber-brown/80">From our signature mesh trucker hats to double-walled stainless steel tumblers that keep your coffee piping hot all day.</p>
+<span class="bg-warm-white text-timber-brown px-4 py-2 rounded-full font-label-md text-label-md shadow-sm border border-limestone inline-block">*Available In-Store</span>
+</div>
+<div class="md:col-span-5 relative h-[400px] flex items-center justify-center order-1 md:order-2">
+<img class="w-[110%] h-auto object-contain absolute right-[-5%] lookbook-image-hover delay-75 drop-shadow-2xl" data-alt="A dynamic product arrangement featuring a matte black stainless steel tumbler and a signature mesh trucker hat hovering close together. The items cast soft, diffused ambient shadows against a soft mint green background, highlighting their premium materials and rugged everyday utility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLJ3WwW2jtoPOQ8iCO-j98pWaWQX2CRwZP9FGXxdEmehXVHK9djAR_c6jLeliXnsMCRYBHJunyomVQGiylKqzyEza-275LgO_gjBaNLKG9euBngLxQl4QUJ4uGZ9S67pa5PKcoF1-VvP9nmPdWRIWIFKgyNi9fnzV6beCP873GzU0lEwSHfgHz2yjh0hjD4ckyKxNQMusKGMaBUs2L-Jaik5bxlZhrKYLleAxhN6SABiGGRgJy0ldwgMxgZoBeY0XHcagOghExBmI">
+</div>
+</div>
+</section>
+<!-- 3. CTA Section -->
+<section class="w-full bg-background py-32 px-container-margin">
+<div class="max-w-4xl mx-auto bg-warm-white border border-limestone/50 shadow-[0_8px_30px_rgb(93,64,55,0.06)] rounded-2xl p-16 text-center flex flex-col items-center">
+<h3 class="font-headline-lg text-headline-lg text-timber-brown mb-6">Grab Your Gear Today</h3>
+<p class="font-body-lg text-body-lg text-timber-brown/70 mb-10 max-w-2xl">Our online store is launching in 2027, but you don't have to wait. Visit our flagship locations to shop the full collection in person.</p>
+<a class="bg-primary hover:bg-primary/90 text-on-primary px-10 py-5 rounded-full font-headline-md text-headline-md transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1" href="locations.html">
+                    Find a Store Near You
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-timber-brown dark:bg-charcoal-glass full-width border-t border-outline/20"><div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-7xl mx-auto px-container-margin py-stack-lg md:gap-12 lg:grid-cols-5"><div class="flex flex-col gap-6"><img alt="Foodie's Corner Logo" class="w-48 h-auto object-contain filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDawc76poWIdXfsabhbRgocIk14SyWpJILFqp8cOn4drWL8D5-_W0p4ShNvGTtVWTJKn7YJNAMKagL7VmlUytfGdZUDFaMRQs5NQYMYUygfgq75QnRfTFNwatatXt_ZSV59D1EhJFiOX-F_K8G0teeDCG8Wm9LF8u2H7_MTbu4uc-sxvUAwP_v1g9y7JcO-fVq-s76hVQ26wVcYiBbs2D6oQSfYdzV8u3gJpFY0I8dGctPBaq7PBmdM_mrPjLl7jA1U4yn_0weNSdk"><p class="font-body-md text-body-md text-warm-white/80 mt-2 max-w-xs">Premium Convenience &amp; Fresh Food. Elevating the everyday stop into an experience.</p><p class="font-label-sm text-label-sm text-limestone/60 mt-auto">Â© 2024 Foodie's Corner. All rights reserved.</p></div><div class="flex flex-col gap-4"><h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Company</h4><a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="index.html">About Us</a><a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="careers.html">Careers</a><a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Contact Us</a></div><div class="flex flex-col gap-4"><h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Services</h4><a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="locations.html">Locations</a><a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="deli.html">Picante Deli</a></div><div class="flex flex-col gap-4"><h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Legal</h4><a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Privacy Policy</a><a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Terms of Service</a></div><div class="flex flex-col gap-4"><h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Follow Us</h4><div class="flex flex-col gap-3"><a class="flex items-center gap-2 text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all" href="#"><span class="material-symbols-outlined">photo_camera</span> @foodiescorner.tx</a><a class="flex items-center gap-2 text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all" href="#"><span class="material-symbols-outlined">work</span> LinkedIn</a></div></div></div></footer>
+
+
+
+<!-- Spacer to prevent content from being hidden behind sticky bottom nav on mobile -->
+<div class="h-20 md:hidden"></div>
+
+<!-- Mobile Sticky Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-limestone md:hidden">
+  <div class="flex justify-around items-center py-3 px-2">
+    <!-- Home -->
+    <a href="index.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">home</span>
+      <span class="text-[11px] font-bold text-timber-brown">Home</span>
+    </a>
+    <!-- Deli -->
+    <a href="deli.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">restaurant</span>
+      <span class="text-[11px] font-bold text-timber-brown">Deli</span>
+    </a>
+    <!-- Merch -->
+    <a href="merch.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-foodie-orange" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+      <span class="text-[11px] font-bold text-foodie-orange">Merch</span>
+    </a>
+    <!-- Stores -->
+    <a href="locations.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">location_on</span>
+      <span class="text-[11px] font-bold text-timber-brown">Stores</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-drawer-overlay" class="fixed inset-0 z-50 bg-[#1c1c19]/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+  <div id="mobile-drawer-panel" class="absolute top-0 right-0 h-full w-[280px] bg-[#fcf9f4] shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Header with Close Button -->
+    <div class="flex justify-between items-center mb-8">
+      <img alt="Foodie's Corner Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3kwKt5BS58FWcjnzMqTO1LpptqoERqpH6qxAZVYTRRjQyq5owhbwf_nPFWVanuvqZXvLTEuna5TcPQc7UwOrtnhaXdAEeTvv5CW43g6Ajzb8YDljSZh001uY7oRRS8SluYNpiKI5AEQGIQwacSi7f4wjlcOVpscDUGMaK7IJcuYJYRutMTenTosxan3N4XTl0xrIIfJWHi5b9GYoF3W4yMIr36F0Fb_dBEYCWAYycNhRnisWJd3pr3x-5QDSFVwxBSTpqqahNeNEVIA">
+      <button id="mobile-drawer-close" aria-label="Close Menu" class="text-timber-brown p-2 hover:opacity-80 transition-all">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    
+    <!-- Navigation Links -->
+    <nav class="flex flex-col gap-6 font-display-lg text-[22px] font-bold text-timber-brown flex-grow">
+      <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Home</a>
+      <a href="locations.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Locations</a>
+      <a href="deli.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Deli</a>
+      <a href="merch.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Merchandise</a>
+      <a href="careers.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Careers</a>
+    </nav>
+
+    <!-- Drawer Footer Actions -->
+    <div class="mt-auto">
+      <a href="locations.html" class="block w-full text-center bg-foodies-orange text-white font-bold py-4 rounded-lg hover:bg-primary-container transition-all">
+        Find a Store
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+    const overlay = document.getElementById('mobile-drawer-overlay');
+    const panel = document.getElementById('mobile-drawer-panel');
+
+    function openMenu() {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+    }
+
+    function closeMenu() {
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('translate-x-full');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeMenu();
+      });
+    }
+  });
+</script>
+
+</body></html>
