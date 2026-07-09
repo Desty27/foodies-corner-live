@@ -153,10 +153,10 @@
 <!-- Desktop Navigation & Actions -->
 <div class="hidden md:flex items-center gap-8">
 <nav aria-label="Main Navigation" class="flex items-center gap-8">
-<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="#picante">Food</a>
-<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="#merchandise">Merch</a>
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="deli.html">Food</a>
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="merch.html">Merch</a>
 </nav>
-<a class="bg-foodies-orange text-warm-white font-label-md text-label-md px-6 py-3 rounded hover:bg-primary-container transition-colors shadow-sm inline-flex items-center gap-2" href="#locations">
+<a class="border border-foodies-orange bg-foodies-orange text-warm-white font-label-md text-label-md px-6 py-3 rounded hover:bg-white hover:text-foodies-orange transition-colors duration-300 shadow-sm inline-flex items-center gap-2" href="locations.html">
                         Find a Store
                     </a>
 </div>
@@ -194,8 +194,8 @@
 <p class="font-body-md text-body-md text-on-surface-variant max-w-md">All locations carry fresh food, premium gas, and everything your road trip needs.</p>
 </div>
 <!-- Right: Map Area with Floating Button -->
-<div class="relative rounded-2xl overflow-hidden h-[400px] border border-limestone shadow-sm">
-<img alt="Map of Central Texas locations" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd17ND3vNPbc_HD56KnOPzDeown-YqgEgMU39qLbHq4pibTvmwNY8hoI2yiI22_yyioxqA8RhEt23slviB72e9ixR7AJhHf88W6UMrtvYgbQBw3PN5xgE9zdf9uHsz8BOwuSZfqmo4nE6EGCwrI-_DMMII_vCSjb03SFUvETr_6iFoeEV3wYk8oNpeRNkVJunuWzMmFe6kPnrdvAuVK9eqcpIQDJWbi4NIieUn3GNVkCekWm0BG2KkHioUEUIBNeoBApnJc2UoHxuH5Q">
+<div class="relative rounded-2xl overflow-hidden h-[400px]">
+<img alt="Map of Central Texas locations" class="w-full h-full object-cover" style="mask-image: linear-gradient(to bottom, black 60%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd17ND3vNPbc_HD56KnOPzDeown-YqgEgMU39qLbHq4pibTvmwNY8hoI2yiI22_yyioxqA8RhEt23slviB72e9ixR7AJhHf88W6UMrtvYgbQBw3PN5xgE9zdf9uHsz8BOwuSZfqmo4nE6EGCwrI-_DMMII_vCSjb03SFUvETr_6iFoeEV3wYk8oNpeRNkVJunuWzMmFe6kPnrdvAuVK9eqcpIQDJWbi4NIieUn3GNVkCekWm0BG2KkHioUEUIBNeoBApnJc2UoHxuH5Q">
 <div class="absolute top-4 right-4 z-10">
 <a class="inline-flex items-center justify-center border-2 border-foodies-orange bg-white/90 backdrop-blur-sm text-foodies-orange font-bold rounded-full px-6 py-2 hover:bg-foodies-orange hover:text-white transition-colors shadow-md" href="locations.html">
                     View on MAP
@@ -346,7 +346,18 @@
 <h3 class="font-label-md text-foodies-orange font-bold uppercase tracking-wider mb-2">DELI</h3>
 <h2 class="font-display-lg text-display-lg text-on-surface font-bold mb-6">Fuel your <span class="text-foodies-orange">Appetite</span></h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">We offer fresh in house made food, grab &amp; go items, snacks and beverages at all locations. Your perfect one stop shop.</p>
-<div class="flex flex-col gap-4 pl-6 border-l-4 border-limestone"><h3 class="font-headline-md text-[24px] text-foodies-orange font-bold">Tacos</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Burritos</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Bowls</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Burgers</h3><h3 class="font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer">Pizza</h3></div>
+<div class="relative pl-6 flex flex-col gap-4" id="menu-item-list">
+  <!-- The background track line -->
+  <div class="absolute left-0 top-0 w-1 h-full bg-limestone rounded-full"></div>
+  <!-- The active sliding indicator line -->
+  <div id="sliding-indicator" class="absolute left-0 w-1 bg-foodies-orange rounded-full transition-all duration-300 ease-out" style="height: 0px; top: 0px; opacity: 0;"></div>
+  
+  <h3 class="menu-category-item font-headline-md text-[24px] text-foodies-orange font-bold cursor-pointer transition-colors duration-200" data-index="0">Tacos</h3>
+  <h3 class="menu-category-item font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer transition-colors duration-200" data-index="1">Burritos</h3>
+  <h3 class="menu-category-item font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer transition-colors duration-200" data-index="2">Bowls</h3>
+  <h3 class="menu-category-item font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer transition-colors duration-200" data-index="3">Burgers</h3>
+  <h3 class="menu-category-item font-headline-md text-[24px] text-on-surface-variant font-bold hover:text-on-surface transition-colors cursor-pointer transition-colors duration-200" data-index="4">Pizza</h3>
+</div>
 <div class="mt-10">
 <a class="inline-flex items-center gap-2 font-bold text-headline-md text-primary border-2 border-primary bg-white px-10 py-4 rounded hover:bg-primary hover:text-primary-fixed transition-colors" href="deli.html">View Full Menu</a>
 </div>
@@ -410,7 +421,7 @@
 <div class="max-w-7xl mx-auto px-container-margin py-16 md:py-24 relative">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 <div class="z-10">
-<h2 class="font-display-lg text-display-lg text-timber-brown mb-4 font-bold">Shop Our Online Store</h2>
+<h2 class="font-display-lg text-display-lg text-timber-brown mb-4 font-bold">View our Merch</h2>
 <p class="font-body-lg text-timber-brown/80 mb-8 max-w-md">Discover exclusive Foodie's Corner merchandise. High-quality apparel and accessories for the road ahead.</p>
 <a class="bg-foodies-orange text-white font-bold text-label-md px-8 py-4 rounded hover:bg-primary-container transition-colors shadow-sm inline-block" href="merch.html">
                         View Merch
@@ -421,10 +432,11 @@
 <div class="absolute top-0 right-10 w-48 md:w-64 transform rotate-12 hover:rotate-6 transition-transform duration-500 z-20 mix-blend-multiply">
 <img alt="Signature Trucker Hat" class="w-full h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCafcDzMNnAMWG0blPjEoLjR4bfKJhv-4oNRJmoYi2zoDhEjxabUzBAjNy98fAvZzf4JauH56DUxbQjd9Qi5lGsppMZdFLuwayyXlpt8wvAlnQ2Ti-NQXHLYlOeqwFemQ-yKjyMLVrtun7eVIYpjwRLjNfH6LxijrI_d8XRdxgGwWKC9mVCb6dVaX4WMJhr0AUP_Sc39-gRy3T9TjJ6ha_k8MibI8EXp05SqhiTDOB-MyC6zDLdzTOxJnItMv447Tdlp_IAqM9SuTs">
 </div>
-<div class="absolute bottom-0 left-0 md:-left-10 w-56 md:w-80 transform -rotate-6 hover:rotate-0 transition-transform duration-500 z-10 mix-blend-multiply">
+<div class="absolute bottom-10 left-8 md:left-16 w-56 md:w-72 transform -rotate-6 hover:rotate-0 transition-transform duration-500 z-10 mix-blend-multiply">
 <img alt="Heritage Hoodie" class="w-full h-auto drop-shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOiRzsBlciAlgpyD4_dK7JrSKXjoy_Ntsc6N5eI00Bzgvjr61o0RIn65L_Pc0O28_jxLWcuoE0PXK0L86hJNJpEA9SJ7cgimBsr-lrjPwal1C7WaLFtqXvD6nFCelIS4-b826-yGco3VNfT88kgSUUHp1WZWiSvWeGK71jGjW9DsK12raS_Sq99wCh7U0n8TGg0vtBsFObd-ISJ5MAB2dxoM5fIwPCAHouQBdyhITEao_b__6OVIIkaQLdUsW0CZicN5WRXJ6FxwQ">
 </div>
-<div class="absolute top-1/4 right-0 w-32 md:w-48 transform -rotate-12 hover:-rotate-6 transition-transform duration-500 z-30 mix-blend-multiply">
+<div class="absolute bottom-0 -left-8 md:-left-16 w-32 md:w-44 transform rotate-12 hover:rotate-6 transition-transform duration-500 z-30 mix-blend-multiply">
+<img alt="Premium Water Bottle/Tumbler" class="w-full h-auto drop-shadow-xl" src="assets/merch_tumbler.png">
 </div>
 </div>
 </div>
@@ -515,6 +527,64 @@
             header.classList.remove('header-hidden');
         }
         lastScrollY = window.scrollY;
+    });
+
+    // Menu Category Sliding Indicator Behavior
+    document.addEventListener('DOMContentLoaded', () => {
+        const listContainer = document.getElementById('menu-item-list');
+        const indicator = document.getElementById('sliding-indicator');
+        const items = document.querySelectorAll('.menu-category-item');
+        
+        if (!listContainer || !indicator || items.length === 0) return;
+        
+        let activeItem = items[0]; // Tacos is default active
+        
+        function updateIndicator(target) {
+            if (!target) return;
+            indicator.style.height = `${target.clientHeight}px`;
+            indicator.style.top = `${target.offsetTop}px`;
+            indicator.style.opacity = '1';
+        }
+        
+        // Wait for page fonts & styles layout rendering
+        window.addEventListener('load', () => {
+            updateIndicator(activeItem);
+        });
+        
+        // Initial setup trigger
+        setTimeout(() => {
+            updateIndicator(activeItem);
+        }, 300);
+        
+        items.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                updateIndicator(item);
+                items.forEach(i => {
+                    i.classList.remove('text-foodies-orange');
+                    i.classList.add('text-on-surface-variant');
+                });
+                item.classList.remove('text-on-surface-variant');
+                item.classList.add('text-foodies-orange');
+            });
+            
+            item.addEventListener('click', () => {
+                activeItem = item;
+                updateIndicator(item);
+            });
+        });
+        
+        listContainer.addEventListener('mouseleave', () => {
+            updateIndicator(activeItem);
+            items.forEach(i => {
+                if (i === activeItem) {
+                    i.classList.remove('text-on-surface-variant');
+                    i.classList.add('text-foodies-orange');
+                } else {
+                    i.classList.remove('text-foodies-orange');
+                    i.classList.add('text-on-surface-variant');
+                }
+            });
+        });
     });
 </script>
 

@@ -115,6 +115,15 @@
         .lookbook-card:hover .lookbook-image-hover.delay-75 {
              transform: scale(1.03) rotate(-3deg);
         }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
@@ -133,10 +142,10 @@
 </div>
 <div class="relative h-[400px] md:h-full min-h-[400px] flex items-center justify-center">
 <!-- Overlapping collage of merchandise -->
-<div class="absolute w-64 h-64 top-10 left-10 transform -rotate-6 z-20 drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+<div class="absolute w-44 h-44 sm:w-64 sm:h-64 top-10 left-4 sm:left-10 transform -rotate-6 z-20 drop-shadow-2xl hover:scale-105 transition-transform duration-500">
 <img class="w-full h-full object-contain filter drop-shadow-xl" data-alt="A high-quality product photography shot of a premium vintage-wash hoodie with the Foodie's Corner logo embroidered on the chest. The hoodie is neatly folded and floating on a pure white background with soft, studio lighting casting gentle shadows, highlighting the thick cotton texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX3d8WrfTMT9bS4s44OInnejxigxnFpzbnsmHbidT1y7twlVS1MS4Vku-fRzd9dQt3JcJnSswStnQTEyK5lKHRdBCKEKEMmoniRsMJEA9nWuu_yxg6TPtRrZ8mv8KyWikwm_Jaj__APwKYFcXHVVrASBzSkmrFP_mXEpJ7aYcRbeCVSHXeSdPiJR-4klFZZoBhAfgLSQ-zGQTlZfl_6lqfpcqZUyqB9xN6gI9Y3NaRrE3AjoyPlzJGv8WeATcvZAeYrF8oa84kIxM">
 </div>
-<div class="absolute w-56 h-56 bottom-10 right-10 transform rotate-12 z-30 drop-shadow-xl hover:scale-105 transition-transform duration-500 delay-75">
+<div class="absolute w-36 h-36 sm:w-56 sm:h-56 bottom-10 right-4 sm:right-10 transform rotate-12 z-30 drop-shadow-xl hover:scale-105 transition-transform duration-500 delay-75">
 <img class="w-full h-full object-contain filter drop-shadow-xl" data-alt="A clean, studio product shot of a stylish mesh trucker hat in earthy tones (brown and beige) featuring a subtle woven patch of the Foodie's Corner logo. The hat is angled slightly to show its profile, floating against a clean white backdrop, lit with crisp commercial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj0rAPeUMWUh7m2L_rgdXwaiLC3pLfyoHvGnFy9ZFTD0U06fMUd2M_sXC3zXSDhFw9QBRxGC8fsmmGt8ujtRvqfzVn_Lo84qAeHc8gmfKDRWTQdQ_xke-cU8as4Y4Xs0-GPrYiyCP-qBfRuzZury8p08E_uJHfYT77bToEgKKB3jE_St50myKZ2z-Yfu1fdvzQQe0EPcAeC6-oAJZf4Y0CYv8mVjz1wBjFjq8qyfqYexc0XS7jAnwBQgtupKTkrDTQvrAxmGOOGJY">
 </div>
 </div>
@@ -146,8 +155,8 @@
 <!-- Block 1 -->
 <section class="w-full bg-warm-peach py-24 lookbook-card overflow-hidden">
 <div class="max-w-7xl mx-auto px-container-margin grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
-<div class="md:col-span-5 relative h-[400px] flex items-center justify-center">
-<img class="w-[120%] h-auto object-contain absolute left-[-10%] lookbook-image-hover drop-shadow-2xl" data-alt="Two premium cotton sweatshirts, one a vintage wash hoodie and the other a classic crewneck, casually draped and slightly overlapping as if floating in mid-air. The lighting is soft and warm, emphasizing the cozy texture and high-quality construction of the apparel, set against a seamless pale peach background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvLZ-yswofGa24EYKT58AuTX4m8ylf6mXVnfi5ro2jwRw_zLvZMUjzEkz3aUbzCAQQsbAuHd8D8Ozc_DsLpoJrEjWH4L8DO7NsE7SKdDW9g19NubcbRgIJkbrmw8ufy2yjRWk9N594DdwALe2s8z0S1S2-OQ2cljGSqgJPLiSN1Kv5uJRb5HAINeOcGK8yFSwIMQRc3e450zRmYzwdtgWCcKLLQ9ovUYcjc6u8xoJ_bLpP1qcu28yJennjKvD6ymswjAxOCeRFBs4">
+<div class="md:col-span-5 relative h-[300px] md:h-[400px] flex items-center justify-center overflow-visible">
+<img class="w-[85%] md:w-[120%] h-auto object-contain absolute md:left-[-10%] lookbook-image-hover drop-shadow-2xl" data-alt="Two premium cotton sweatshirts, one a vintage wash hoodie and the other a classic crewneck, casually draped and slightly overlapping as if floating in mid-air. The lighting is soft and warm, emphasizing the cozy texture and high-quality construction of the apparel, set against a seamless pale peach background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvLZ-yswofGa24EYKT58AuTX4m8ylf6mXVnfi5ro2jwRw_zLvZMUjzEkz3aUbzCAQQsbAuHd8D8Ozc_DsLpoJrEjWH4L8DO7NsE7SKdDW9g19NubcbRgIJkbrmw8ufy2yjRWk9N594DdwALe2s8z0S1S2-OQ2cljGSqgJPLiSN1Kv5uJRb5HAINeOcGK8yFSwIMQRc3e450zRmYzwdtgWCcKLLQ9ovUYcjc6u8xoJ_bLpP1qcu28yJennjKvD6ymswjAxOCeRFBs4">
 </div>
 <div class="md:col-span-7 flex flex-col items-start space-y-6 md:pl-12">
 <h2 class="font-headline-lg text-headline-lg text-timber-brown">The Heritage Collection</h2>
@@ -156,25 +165,197 @@
 </div>
 </div>
 </section>
+<!-- Heritage Collection Carousel -->
+<section class="w-full bg-[#FCF9F4] py-16">
+<div class="max-w-7xl mx-auto px-container-margin">
+<h2 class="font-headline-lg text-[32px] font-bold text-[#5D4037] mb-8">Apparel</h2>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 no-scrollbar">
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Heritage Tee" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWjuit03UYuGxK3_U_1N-cGlq34OWsdhboVomtUjLF4BgswQVId9usui7I2eFR8JYr_Uoch1IfJESEzlUnRn4labTiT5RD5gNJ1gXXjAFkp-Wah2Du6XijYrjlSffonPQ0lZeDvY2ICIqx3XCaSW9m9zLDiTQ_7ZugWPAdovRPMZh6GNRjR6h7v1dz_fObnNfp1zD7A2kA_ZzyKdkAALlTG2hNkv4ePJey0d790HD6H9h4pWXwdcva">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Heritage Tee</h4>
+<p class="font-body-md text-timber-brown/70">$25.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Heritage Hoodie" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAezchsYeofLHs7JJkmsAXIjRrmeor-BPZ_6S8MKGnGqMUBYpvI0RwmlQPsyZus5-NGG5RZzoLZgOZNChUKN1vRICz45Z_HQPnp-b0kv9Nu4po73RKT2ZzcObus31zow_xgRTg_D0GuetSqpSvc9gTqgqaq-5edASXQcC58V2w9DkLA14sGdIBD6sLVKX32zHp9-SQSI-z5sUEhNatjralpipoG6Hj3LpfmzLfgkSDhi4K50ugvGKbl">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Heritage Hoodie</h4>
+<p class="font-body-md text-timber-brown/70">$65.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Heritage Crewneck" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAitLjdOSE7EO7OQv6Yq__NiQDcuLlxSFcweUi3ApSztUR0Zcs8xOvfB03_H3ewgf-jW9djrd6gzfcVKkshYOkxFEjWuQOH_PmcfBP6Sie74aTZo8Cons-8Xlz1UTkpKLiZT-ZRbTDEG4JmIjTUF5C1atBkkDRxkQT8kOooQk-_6hEj5OLxN1RaFyfVn8UKcwne2vyCsMWiC_pF7VrrfNtR4izGWYgyLCfXqNIv2DDHQCj-JDxbGiwi">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Heritage Crewneck</h4>
+<p class="font-body-md text-timber-brown/70">$55.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Heritage Long Sleeve" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjSlhXdLzHAwMRJx5R-HLUVA6CPu98JQIYt864jdOhSLXCvYOBA3pgnhY7yK_WiIiFNtqDvSx2H94yg7IlaLpQEB4ou2Sk3wVPgJsG_Qpxhy1NZEVVC78pCSxXrvKymhZo6x6BmmRsJtF_m1UxhIO7euzvRJ3uPqXSQcDRqCnGkaLljbQkmBEkNv0DgcZzeEFYPfg_fZDaOWiucNS-zyquBRJd-NEChybSI9-VmC38BMS_X4TG82uf">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Heritage Long Sleeve</h4>
+<p class="font-body-md text-timber-brown/70">$35.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Vintage Wash Tee" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWjuit03UYuGxK3_U_1N-cGlq34OWsdhboVomtUjLF4BgswQVId9usui7I2eFR8JYr_Uoch1IfJESEzlUnRn4labTiT5RD5gNJ1gXXjAFkp-Wah2Du6XijYrjlSffonPQ0lZeDvY2ICIqx3XCaSW9m9zLDiTQ_7ZugWPAdovRPMZh6GNRjR6h7v1dz_fObnNfp1zD7A2kA_ZzyKdkAALlTG2hNkv4ePJey0d790HD6H9h4pWXwdcva">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Vintage Wash Tee</h4>
+<p class="font-body-md text-timber-brown/70">$30.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Zip-Up Hoodie" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAezchsYeofLHs7JJkmsAXIjRrmeor-BPZ_6S8MKGnGqMUBYpvI0RwmlQPsyZus5-NGG5RZzoLZgOZNChUKN1vRICz45Z_HQPnp-b0kv9Nu4po73RKT2ZzcObus31zow_xgRTg_D0GuetSqpSvc9gTqgqaq-5edASXQcC58V2w9DkLA14sGdIBD6sLVKX32zHp9-SQSI-z5sUEhNatjralpipoG6Hj3LpfmzLfgkSDhi4K50ugvGKbl">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Zip-Up Hoodie</h4>
+<p class="font-body-md text-timber-brown/70">$60.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Pocket Tee" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAitLjdOSE7EO7OQv6Yq__NiQDcuLlxSFcweUi3ApSztUR0Zcs8xOvfB03_H3ewgf-jW9djrd6gzfcVKkshYOkxFEjWuQOH_PmcfBP6Sie74aTZo8Cons-8Xlz1UTkpKLiZT-ZRbTDEG4JmIjTUF5C1atBkkDRxkQT8kOooQk-_6hEj5OLxN1RaFyfVn8UKcwne2vyCsMWiC_pF7VrrfNtR4izGWYgyLCfXqNIv2DDHQCj-JDxbGiwi">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Pocket Tee</h4>
+<p class="font-body-md text-timber-brown/70">$28.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Heavyweight Sweatpants" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjSlhXdLzHAwMRJx5R-HLUVA6CPu98JQIYt864jdOhSLXCvYOBA3pgnhY7yK_WiIiFNtqDvSx2H94yg7IlaLpQEB4ou2Sk3wVPgJsG_Qpxhy1NZEVVC78pCSxXrvKymhZo6x6BmmRsJtF_m1UxhIO7euzvRJ3uPqXSQcDRqCnGkaLljbQkmBEkNv0DgcZzeEFYPfg_fZDaOWiucNS-zyquBRJd-NEChybSI9-VmC38BMS_X4TG82uf">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Heavyweight Sweatpants</h4>
+<p class="font-body-md text-timber-brown/70">$50.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 <!-- Block 2 -->
 <section class="w-full bg-soft-mint py-24 lookbook-card overflow-hidden">
 <div class="max-w-7xl mx-auto px-container-margin grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
 <div class="md:col-span-7 flex flex-col items-start space-y-6 md:pr-12 order-2 md:order-1">
-<h2 class="font-headline-lg text-headline-lg text-timber-brown">Everyday Essentials</h2>
+<h2 class="font-headline-lg text-headline-lg text-timber-brown">The Essentials</h2>
 <p class="font-body-lg text-body-lg text-timber-brown/80">From our signature mesh trucker hats to double-walled stainless steel tumblers that keep your coffee piping hot all day.</p>
 <span class="bg-warm-white text-timber-brown px-4 py-2 rounded-full font-label-md text-label-md shadow-sm border border-limestone inline-block">*Available In-Store</span>
 </div>
-<div class="md:col-span-5 relative h-[400px] flex items-center justify-center order-1 md:order-2">
-<img class="w-[110%] h-auto object-contain absolute right-[-5%] lookbook-image-hover delay-75 drop-shadow-2xl" data-alt="A dynamic product arrangement featuring a matte black stainless steel tumbler and a signature mesh trucker hat hovering close together. The items cast soft, diffused ambient shadows against a soft mint green background, highlighting their premium materials and rugged everyday utility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLJ3WwW2jtoPOQ8iCO-j98pWaWQX2CRwZP9FGXxdEmehXVHK9djAR_c6jLeliXnsMCRYBHJunyomVQGiylKqzyEza-275LgO_gjBaNLKG9euBngLxQl4QUJ4uGZ9S67pa5PKcoF1-VvP9nmPdWRIWIFKgyNi9fnzV6beCP873GzU0lEwSHfgHz2yjh0hjD4ckyKxNQMusKGMaBUs2L-Jaik5bxlZhrKYLleAxhN6SABiGGRgJy0ldwgMxgZoBeY0XHcagOghExBmI">
+<div class="md:col-span-5 relative h-[300px] md:h-[400px] flex items-center justify-center order-1 md:order-2 overflow-visible">
+<img class="w-[85%] md:w-[110%] h-auto object-contain absolute md:right-[-5%] lookbook-image-hover delay-75 drop-shadow-2xl" data-alt="A dynamic product arrangement featuring a matte black stainless steel tumbler and a signature mesh trucker hat hovering close together. The items cast soft, diffused ambient shadows against a soft mint green background, highlighting their premium materials and rugged everyday utility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLJ3WwW2jtoPOQ8iCO-j98pWaWQX2CRwZP9FGXxdEmehXVHK9djAR_c6jLeliXnsMCRYBHJunyomVQGiylKqzyEza-275LgO_gjBaNLKG9euBngLxQl4QUJ4uGZ9S67pa5PKcoF1-VvP9nmPdWRIWIFKgyNi9fnzV6beCP873GzU0lEwSHfgHz2yjh0hjD4ckyKxNQMusKGMaBUs2L-Jaik5bxlZhrKYLleAxhN6SABiGGRgJy0ldwgMxgZoBeY0XHcagOghExBmI">
 </div>
 </div>
 </section>
-<!-- 3. CTA Section -->
+<!-- Everyday Essentials Carousel -->
+<section class="w-full bg-[#FCF9F4] py-16">
+<div class="max-w-7xl mx-auto px-container-margin">
+<h2 class="font-headline-lg text-[32px] font-bold text-[#5D4037] mb-8">Everyday Essentials</h2>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 no-scrollbar">
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Signature Mug" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbv8wLSoLPX-lIsJnURhX3zaEhn7UyMuJoaIItkGg0d7FAoVJXvA307C9qRwOlS0Wf_c2ZDBRPw9LkVNx8jEG8qAMiaFDQbNjFdEyYwLkVuexP8iOYonD6cSXUTnJBmDnp4G3DIEaBPPChIx10t2LcbXLvQZnzJG5F_-VPdLLgFtvmMRhBlUqqCFfhhWtkIxgaWelk1wQLg7eoTWXmQl6l9KpP7fDdnyEsvdvVO2yWXYHIN2MPrm5K">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Signature Mug</h4>
+<p class="font-body-md text-timber-brown/70">$15.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Premium Water Bottle" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClOoc5zS6wBa9Zh1wryhfwEsMkNlR5bJk_Uf7hQYkh7tbVLXt--TtEVTXmM9nBlA2q9XgXuTJwS388Jvl9pMKemQtcBILRIViE7YyJ_f_0yfVe6_FYMoPHTbhdbtWrXMu99_bjQsWu_-JnyAiYV2xNlUMFyWhlpCrQDo_yezxMWmfygNsMzK34cRJEu2as1MT3-xLljU7sCZxl5esiieoNL32yAGV5rhhXN5C5JVu7kpzo1wbIoX4y">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Premium Water Bottle</h4>
+<p class="font-body-md text-timber-brown/70">$35.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Classic Trucker Hat" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK27jR2CCXi1rFGmyFBQHefRc4UqiLnwTurZ5DI_rfoxtDGDa7TMtbALk_z-8xOOeL8Ff5ZqvWDj3egUWS4Uo4a_Hx8E0EGH_Ena32VkFWEplyPJgCCJHJklrHQH7_DJvrBBLP0vcjgzWCukka_zGEmrmboh4CV4E-10OkMoBhUdYBPXJB8VjVHH40F_TK-yUzzgn_0BqsrqW-y0wbTYRR_ksSxwS0K5T-UazO-nvfpwB_O-eE98QT">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Classic Trucker Hat</h4>
+<p class="font-body-md text-timber-brown/70">$25.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Travel Tumbler" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnmO1qzD5a4epiEId70OzxdiUe1CCHCljbGM_NpgkPo3prsO0Mztli0oFkLZBg10y_LB_I_LiGUwVmKVWYdqpI_LV1q2CTSjxEfUxq1C2iTjjWHueSfe_xcZLymSrm_mfcuYdhtMea0xgigdozqKjrVq3SgABEQBMedCHBKRw1TrJGCQy9YGM4yF-y_LaGmZMmf2QvN21KZqVgm63W_pDLzUSdVwZMXy_JVNo1I7VXZy3K6UOBNhog">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Travel Tumbler</h4>
+<p class="font-body-md text-timber-brown/70">$30.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Canvas Tote Bag" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbv8wLSoLPX-lIsJnURhX3zaEhn7UyMuJoaIItkGg0d7FAoVJXvA307C9qRwOlS0Wf_c2ZDBRPw9LkVNx8jEG8qAMiaFDQbNjFdEyYwLkVuexP8iOYonD6cSXUTnJBmDnp4G3DIEaBPPChIx10t2LcbXLvQZnzJG5F_-VPdLLgFtvmMRhBlUqqCFfhhWtkIxgaWelk1wQLg7eoTWXmQl6l9KpP7fDdnyEsvdvVO2yWXYHIN2MPrm5K">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Canvas Tote Bag</h4>
+<p class="font-body-md text-timber-brown/70">$20.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Enamel Camp Mug" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClOoc5zS6wBa9Zh1wryhfwEsMkNlR5bJk_Uf7hQYkh7tbVLXt--TtEVTXmM9nBlA2q9XgXuTJwS388Jvl9pMKemQtcBILRIViE7YyJ_f_0yfVe6_FYMoPHTbhdbtWrXMu99_bjQsWu_-JnyAiYV2xNlUMFyWhlpCrQDo_yezxMWmfygNsMzK34cRJEu2as1MT3-xLljU7sCZxl5esiieoNL32yAGV5rhhXN5C5JVu7kpzo1wbIoX4y">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Enamel Camp Mug</h4>
+<p class="font-body-md text-timber-brown/70">$18.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Knit Beanie" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK27jR2CCXi1rFGmyFBQHefRc4UqiLnwTurZ5DI_rfoxtDGDa7TMtbALk_z-8xOOeL8Ff5ZqvWDj3egUWS4Uo4a_Hx8E0EGH_Ena32VkFWEplyPJgCCJHJklrHQH7_DJvrBBLP0vcjgzWCukka_zGEmrmboh4CV4E-10OkMoBhUdYBPXJB8VjVHH40F_TK-yUzzgn_0BqsrqW-y0wbTYRR_ksSxwS0K5T-UazO-nvfpwB_O-eE98QT">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Knit Beanie</h4>
+<p class="font-body-md text-timber-brown/70">$22.00</p>
+</div>
+</div>
+<div class="snap-start shrink-0 w-64 flex flex-col space-y-4">
+<div class="w-64 h-64 bg-limestone/20 rounded-xl flex items-center justify-center p-4">
+<img alt="Keychain Lanyard" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnmO1qzD5a4epiEId70OzxdiUe1CCHCljbGM_NpgkPo3prsO0Mztli0oFkLZBg10y_LB_I_LiGUwVmKVWYdqpI_LV1q2CTSjxEfUxq1C2iTjjWHueSfe_xcZLymSrm_mfcuYdhtMea0xgigdozqKjrVq3SgABEQBMedCHBKRw1TrJGCQy9YGM4yF-y_LaGmZMmf2QvN21KZqVgm63W_pDLzUSdVwZMXy_JVNo1I7VXZy3K6UOBNhog">
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-timber-brown">Keychain Lanyard</h4>
+<p class="font-body-md text-timber-brown/70">$12.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Foodie's Plushies Section -->
+<section class="w-full bg-[#E6E6FA] py-24 lookbook-card overflow-hidden">
+<div class="max-w-7xl mx-auto px-container-margin grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<div class="md:col-span-5 relative h-[300px] md:h-[400px] flex items-center justify-center overflow-visible">
+<img class="w-[85%] md:w-[120%] h-auto object-contain absolute md:left-[-10%] lookbook-image-hover drop-shadow-2xl rounded-2xl" data-alt="Foodie's Plushies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzq-jodsfGPOdRAGDyjON-zPd3GgfIQ1BgY0yY0FYzJZ5NLw7jiv0NK0jQ5MGuEof7bIWMnv6qJlZXwN7fDKHIO4TYnbA4t67c5Z38K2ZN15DrvaOzkbGyO8n-F_7o0DrQ67t5WSBkr1A5XzIgxi_nBGnN8iUScuA1bc320PeMDTF21ZD0UBIWRwJDhe9A2EJVp5yxmojHoiZs4oKPjElzRCRo_11K3gdyPU-qHaIxyLctYAkIJwBE">
+</div>
+<div class="md:col-span-7 flex flex-col items-start space-y-6 md:pl-12">
+<h2 class="font-headline-lg text-headline-lg text-timber-brown">Foodie's Plushies</h2>
+<p class="font-body-lg text-body-lg text-timber-brown/80">Take home a piece of the corner with our exclusive stuffed animals.</p>
+</div>
+</div>
+</section>
+<!-- 4. CTA Section -->
 <section class="w-full bg-background py-32 px-container-margin">
 <div class="max-w-4xl mx-auto bg-warm-white border border-limestone/50 shadow-[0_8px_30px_rgb(93,64,55,0.06)] rounded-2xl p-16 text-center flex flex-col items-center">
 <h3 class="font-headline-lg text-headline-lg text-timber-brown mb-6">Grab Your Gear Today</h3>
 <p class="font-body-lg text-body-lg text-timber-brown/70 mb-10 max-w-2xl">Our online store is launching in 2027, but you don't have to wait. Visit our flagship locations to shop the full collection in person.</p>
-<a class="bg-primary hover:bg-primary/90 text-on-primary px-10 py-5 rounded-full font-headline-md text-headline-md transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1" href="locations.html">
+<a href="locations.html" class="bg-primary hover:bg-primary/90 text-on-primary px-10 py-5 rounded-full font-headline-md text-headline-md transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 inline-block">
                     Find a Store Near You
                 </a>
 </div>

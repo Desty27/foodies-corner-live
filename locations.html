@@ -172,32 +172,12 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .amenity-icon {
-            width: 48px;
-            height: 48px;
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf-i1ZbRl3LfIP2kHt8KrksTzSh1E5HhReFfjyc8esnS0Ye9I9_T5DVvsyqv0NBNV8z4vtIJMdosU82Pkzp4Nior3DM88unmUxTiCGrgUCBY-UE00an1nBhaQ7OD6UdtGr5Zr2yi0mkdd_uiYfhYAtkwC6l-O-i_10sC_pozS5A86zvZoOIjXgeXCDKGFkoYYqHDWq0k8Q9UsJYgL2UUVxO58utnlqPjcF9Fd7bU64dM3QZX0tg_u9xJ3uYqEX3CXmeEOzu2UOGKo');
-            background-size: cover;
-            display: inline-block;
-        }
-        /* Icon background positions based on the sprite sheet */
-        .icon-gas { background-position: 0 0; }
-        .icon-diesel { background-position: -48px 0; }
-        .icon-deli { background-position: -96px 0; }
-        .icon-slushy { background-position: -144px 0; }
-        .icon-restroom { background-position: -192px 0; }
-        .icon-coffee { background-position: -240px 0; }
-        .icon-atm { background-position: -288px 0; }
-        .icon-ice { background-position: -336px 0; }
-        .icon-fountain { background-position: -384px 0; }
-        .icon-propane { background-position: -432px 0; }
-        .icon-bakery { background-position: -96px 0; } /* Reusing Deli for Bakery for now */
-
-        /* Alternative using background position for the specific image provided */
+        
         .sprite-icon {
-            width: 84px; /* approx width of one icon box */
-            height: 84px; /* approx height */
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf-i1ZbRl3LfIP2kHt8KrksTzSh1E5HhReFfjyc8esnS0Ye9I9_T5DVvsyqv0NBNV8z4vtIJMdosU82Pkzp4Nior3DM88unmUxTiCGrgUCBY-UE00an1nBhaQ7OD6UdtGr5Zr2yi0mkdd_uiYfhYAtkwC6l-O-i_10sC_pozS5A86zvZoOIjXgeXCDKGFkoYYqHDWq0k8Q9UsJYgL2UUVxO58utnlqPjcF9Fd7bU64dM3QZX0tg_u9xJ3uYqEX3CXmeEOzu2UOGKo');
-            background-size: 423px 152px; /* Adjusted to fit the 5x2 grid approximately */
+            width: 84px;
+            height: 84px;
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0mEtlq_uP8MFTZ6LYKXpMCI859dQOpc_Q0bU80JLfzxAvMLM52IfpDHxsMhDV4BpSxFXokxKp7ZgY0O2FJkFlxVcoT18GU4HueLo_reogHqxkaXk_drny3kmN5XcwsquYLZw5EhiQdocyzwkbza2XQ_Vo3o_5HgeMPAiwtNHrKkAo3r7NDYPjBXC71UPls6nmwXMcrliBKChF7tWqD0u_tkoaUARsksObmscGDApdTi6maO0rfFfsAxB85di1R6qrjg');
+            background-size: 423px 152px;
             display: inline-block;
         }
         
@@ -211,6 +191,13 @@
         .s-ice { background-position: -168px -76px; }
         .s-fountain { background-position: -252px -76px; }
         .s-propane { background-position: -336px -76px; }
+
+        .pattern-bg {
+            background-image: radial-gradient(#DD4F05 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-color: #f6f3ee;
+            opacity: 0.8;
+        }
 
         /* Dynamic Header Scroll Behavior */
         .header-container {
@@ -246,10 +233,10 @@
 <!-- Desktop Navigation & Actions -->
 <div class="hidden md:flex items-center gap-8">
 <nav aria-label="Main Navigation" class="flex items-center gap-8">
-<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="#picante">Food</a>
-<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="#merchandise">Merch</a>
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="deli.html">Food</a>
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="merch.html">Merch</a>
 </nav>
-<a class="bg-foodies-orange text-warm-white font-label-md text-label-md px-6 py-3 rounded hover:bg-primary-container transition-colors shadow-sm inline-flex items-center gap-2" href="#locations">
+<a class="bg-foodies-orange text-warm-white font-label-md text-label-md px-6 py-3 rounded hover:bg-primary-container transition-colors shadow-sm inline-flex items-center gap-2" href="locations.html">
                         Find a Store
                     </a>
 </div>
@@ -269,19 +256,13 @@
 <h1 class="font-display-lg text-display-lg text-timber-brown">Find Your Corner</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant">Discover premium fuel, fresh food, and everyday convenience across Texas.</p>
 </section>
-<!-- Map Section -->
-<section class="w-full h-96 md:h-[500px] rounded-xl overflow-hidden border border-limestone shadow-sm bg-limestone flex items-center justify-center relative">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="A detailed map view of Central Texas highlighting key highways and cities in a clean, modern, light-mode interface with warm accent colors. The map is highly stylized, prioritizing clarity and premium aesthetics over topographical realism." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAmV2ypmE5RGrSWa2viH5KvM9VqMIfDYwIC-Be9Bs_HNYaBd_ox4uW0lmUdSuknVuamliXEC7wIwnErqoUfCoXpQETKLPqqkk5LCuuG_3B4cyIp6ju4C7bNiGbfFPKDR0G-MUIfyap_aekCHZJNC1_wxf-pb-u6Hpjqrg2RNmaZNySUnMH1BC5l27q8WARkC8unOTc1RS79QWjrn5wnS7JD5KUj4SQsV_exkzLA-q6fh5pl3ZjYKBymPWzBTaCTynp1c1vET-JUeNJT3A&quot;);"></div>
-<!-- Placeholder for actual Google Map iframe/embed -->
-<div class="absolute inset-0 bg-surface-variant/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-6xl opacity-50 drop-shadow-md">location_on</span>
-</div>
-</section>
-<!-- Locations Grid -->
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- Variant A: Open -->
-<article class="bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden">
-<div class="bg-brand-orange text-on-primary px-6 py-4">
+<!-- 40/60 Split Layout -->
+<section class="flex flex-col lg:flex-row gap-gutter relative">
+<!-- Left Column (40% width): Scrollable container for location cards -->
+<div class="w-full lg:w-2/5 flex flex-col gap-gutter">
+<!-- Open Location: Cedar Park -->
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="cedar-park.html">
+<div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">Cedar Park</h3>
 </div>
 <div class="p-6 flex flex-col flex-grow space-y-4">
@@ -293,6 +274,10 @@
 <span class="material-symbols-outlined text-outline mt-1 shrink-0">schedule</span>
 <p class="font-body-md text-body-md text-on-surface">M-Sat 5am-11pm, Sun 6am-11pm</p>
 </div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0">phone</span>
+<p class="font-body-md text-body-md text-on-surface">(512) 331-5579</p>
+</div>
 <div class="border-t border-limestone my-2"></div>
 <div class="flex-grow">
 <p class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase tracking-wider">Amenities</p>
@@ -309,14 +294,13 @@
 </div>
 </div>
 <div class="mt-auto pt-4 flex justify-end">
-<button class="bg-brand-orange hover:bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm">
-                            Get Directions
-                        </button>
+<span class="bg-brand-orange text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm group-hover:bg-primary">Get Directions</span>
 </div>
 </div>
-</article>
-<article class="bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden">
-<div class="bg-brand-orange text-on-primary px-6 py-4">
+</a>
+<!-- Open Location: HWY 71 -->
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">HWY 71</h3>
 </div>
 <div class="p-6 flex flex-col flex-grow space-y-4">
@@ -328,6 +312,10 @@
 <span class="material-symbols-outlined text-outline mt-1 shrink-0">schedule</span>
 <p class="font-body-md text-body-md text-on-surface">M-F 6am-12am, Sat 6am-1am, Sun 7am-12am</p>
 </div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0">phone</span>
+<p class="font-body-md text-body-md text-on-surface">(512) 992-0273</p>
+</div>
 <div class="border-t border-limestone my-2"></div>
 <div class="flex-grow">
 <p class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase tracking-wider">Amenities</p>
@@ -341,14 +329,13 @@
 </div>
 </div>
 <div class="mt-auto pt-4 flex justify-end">
-<button class="bg-brand-orange hover:bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm">
-                            Get Directions
-                        </button>
+<span class="bg-brand-orange text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm group-hover:bg-primary">Get Directions</span>
 </div>
 </div>
-</article>
-<article class="bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden">
-<div class="bg-brand-orange text-on-primary px-6 py-4">
+</a>
+<!-- Open Location: West Campus -->
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">West Campus / Rio Grande</h3>
 </div>
 <div class="p-6 flex flex-col flex-grow space-y-4">
@@ -359,6 +346,10 @@
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-outline mt-1 shrink-0">schedule</span>
 <p class="font-body-md text-body-md text-on-surface">M-Sun 7am-12am</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0">phone</span>
+<p class="font-body-md text-body-md text-on-surface">(512) 473-2880</p>
 </div>
 <div class="border-t border-limestone my-2"></div>
 <div class="flex-grow">
@@ -372,14 +363,13 @@
 </div>
 </div>
 <div class="mt-auto pt-4 flex justify-end">
-<button class="bg-brand-orange hover:bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm">
-                            Get Directions
-                        </button>
+<span class="bg-brand-orange text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm group-hover:bg-primary">Get Directions</span>
 </div>
 </div>
-</article>
-<article class="bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden">
-<div class="bg-brand-orange text-on-primary px-6 py-4">
+</a>
+<!-- Open Location: Leander -->
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">Leander</h3>
 </div>
 <div class="p-6 flex flex-col flex-grow space-y-4">
@@ -390,6 +380,10 @@
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-outline mt-1 shrink-0">schedule</span>
 <p class="font-body-md text-body-md text-on-surface">M-Sun 5am-12am</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0">phone</span>
+<p class="font-body-md text-body-md text-on-surface">(512) 456-7448</p>
 </div>
 <div class="border-t border-limestone my-2"></div>
 <div class="flex-grow">
@@ -407,18 +401,16 @@
 </div>
 </div>
 <div class="mt-auto pt-4 flex justify-end">
-<button class="bg-brand-orange hover:bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm">
-                            Get Directions
-                        </button>
+<span class="bg-brand-orange text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm group-hover:bg-primary">Get Directions</span>
 </div>
 </div>
-</article>
-<!-- Variant B: Under Construction -->
-<article class="bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden relative">
-<div class="bg-brand-orange/60 text-on-primary px-6 py-4">
+</a>
+<!-- Open Location: Liberty Hill (Updated) -->
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">Liberty Hill</h3>
 </div>
-<div class="p-6 flex flex-col flex-grow space-y-4 opacity-80">
+<div class="p-6 flex flex-col flex-grow space-y-4">
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-outline mt-1 shrink-0">location_on</span>
 <p class="font-body-md text-body-md text-on-surface">1487 US 183, Liberty Hill, TX 78642</p>
@@ -426,6 +418,10 @@
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-outline mt-1 shrink-0">schedule</span>
 <p class="font-body-md text-body-md text-on-surface">M-Sun 5am-11pm</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0">phone</span>
+<p class="font-body-md text-body-md text-on-surface">Phone Coming Soon</p>
 </div>
 <div class="border-t border-limestone my-2"></div>
 <div class="flex-grow">
@@ -443,23 +439,54 @@
 <div class="flex flex-col items-center gap-1"><div class="sprite-icon s-propane transform scale-50 -my-4 origin-center"></div><span class="text-[10px] font-medium text-center text-on-surface-variant leading-tight">Propane</span></div>
 </div>
 </div>
-<div class="mt-auto pt-4">
-<p class="font-headline-md text-headline-md text-brand-orange font-bold text-center">UNDER CONSTRUCTION</p>
+<div class="mt-auto pt-4 flex justify-end">
+<span class="bg-brand-orange text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md transition-colors shadow-sm group-hover:bg-primary">Get Directions</span>
 </div>
 </div>
-</article>
-<!-- Variant C: Coming Soon -->
-<article class="bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden relative justify-center items-center p-8 bg-surface-container-low min-h-[300px]">
-<div class="text-center w-full z-10">
-<p class="font-display-lg text-display-lg text-outline opacity-20 transform -rotate-12 select-none absolute inset-0 flex items-center justify-center whitespace-nowrap">COMING SOON</p>
-<div class="relative z-20 space-y-4">
-<h3 class="font-headline-lg text-headline-lg text-timber-brown">San Marcos</h3>
-<h3 class="font-headline-lg text-headline-lg text-timber-brown">Belton</h3>
-<h3 class="font-headline-lg text-headline-lg text-timber-brown">Lorena</h3>
-<h3 class="font-headline-lg text-headline-lg text-timber-brown">Jarrell</h3>
+</a>
+<!-- Under Construction: San Marcos (Updated) -->
+<a class="block bg-warm-white/80 rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group relative" href="#">
+<div class="bg-primary-fixed-dim text-on-primary-fixed px-6 py-4 group-hover:bg-inverse-primary transition-colors flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md">San Marcos</h3>
+<span class="text-xs font-bold uppercase tracking-widest border border-current px-2 py-1 rounded">Under Construction</span>
+</div>
+<div class="p-6 flex flex-col flex-grow space-y-4 opacity-80">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-1 shrink-0">location_on</span>
+<p class="font-body-md text-body-md text-on-surface">San Marcos, TX</p>
 </div>
 </div>
-</article>
+</a>
+<!-- Coming Soon: Belton, Lorena, Jarrell (Updated) -->
+<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="#">
+<div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center shadow-sm relative z-10 w-3/4 group-hover:bg-white transition-colors">
+<h3 class="font-headline-lg text-headline-lg text-timber-brown mb-2">Belton</h3>
+<span class="bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-orange/20">Coming Soon</span>
+</div>
+</a>
+<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="#">
+<div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center shadow-sm relative z-10 w-3/4 group-hover:bg-white transition-colors">
+<h3 class="font-headline-lg text-headline-lg text-timber-brown mb-2">Lorena</h3>
+<span class="bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-orange/20">Coming Soon</span>
+</div>
+</a>
+<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="#">
+<div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center shadow-sm relative z-10 w-3/4 group-hover:bg-white transition-colors">
+<h3 class="font-headline-lg text-headline-lg text-timber-brown mb-2">Jarrell</h3>
+<span class="bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-orange/20">Coming Soon</span>
+</div>
+</a>
+</div>
+<!-- Right Column (60% width): Sticky map container -->
+<div class="hidden lg:block w-3/5 relative">
+<div class="sticky top-28 h-[calc(100vh-8rem)] rounded-xl overflow-hidden border border-limestone shadow-sm bg-limestone flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLs56gbkNc3bDXxn_WwHOpckbDUprdXVjUtM6usxY3tik6_fGV9aZ6lP9V6AqX1vY18ElnVHHPsLF_hXIM20mVTWy3T5FSMrTb65-pbFYnhi0_HoVuvNCEN5jZq2KBWaquTQ9in7Hs11ka22WI6X2Vn7z09MFCy2q-_VO_iYfZURRJFkgV4ICV0Uj47NwzDOEezh655-1WkoJI6zSF4vS-owDOK0Z-MJLg8686SmqObUbufDLrx2WCvvpUw');"></div>
+<!-- Placeholder overlay if image is missing -->
+<div class="absolute inset-0 bg-surface-variant/20 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-6xl opacity-50 drop-shadow-md">location_on</span>
+</div>
+</div>
+</div>
 </section>
 </main>
 <!-- Footer -->
