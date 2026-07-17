@@ -4,6 +4,7 @@
 <title>Find Your Corner - Foodie's Corner</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -176,7 +177,7 @@
         .sprite-icon {
             width: 84px;
             height: 84px;
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0mEtlq_uP8MFTZ6LYKXpMCI859dQOpc_Q0bU80JLfzxAvMLM52IfpDHxsMhDV4BpSxFXokxKp7ZgY0O2FJkFlxVcoT18GU4HueLo_reogHqxkaXk_drny3kmN5XcwsquYLZw5EhiQdocyzwkbza2XQ_Vo3o_5HgeMPAiwtNHrKkAo3r7NDYPjBXC71UPls6nmwXMcrliBKChF7tWqD0u_tkoaUARsksObmscGDApdTi6maO0rfFfsAxB85di1R6qrjg');
+            background-image: url('./assets/images/img-74291cb7c841.webp');
             background-size: 423px 152px;
             display: inline-block;
         }
@@ -228,7 +229,7 @@
 <div class="flex items-center justify-between">
 <!-- Brand Logo -->
 <a class="flex-shrink-0" href="index.html">
-<img alt="Foodie's Corner Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3kwKt5BS58FWcjnzMqTO1LpptqoERqpH6qxAZVYTRRjQyq5owhbwf_nPFWVanuvqZXvLTEuna5TcPQc7UwOrtnhaXdAEeTvv5CW43g6Ajzb8YDljSZh001uY7oRRS8SluYNpiKI5AEQGIQwacSi7f4wjlcOVpscDUGMaK7IJcuYJYRutMTenTosxan3N4XTl0xrIIfJWHi5b9GYoF3W4yMIr36F0Fb_dBEYCWAYycNhRnisWJd3pr3x-5QDSFVwxBSTpqqahNeNEVIA">
+<img alt="Foodie's Corner Logo" class="h-16 w-auto object-contain" src="./assets/images/img-543088078c80.webp">
 </a>
 <!-- Desktop Navigation & Actions -->
 <div class="hidden md:flex items-center gap-8">
@@ -299,7 +300,7 @@
 </div>
 </a>
 <!-- Open Location: HWY 71 -->
-<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="hwy-71.html">
 <div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">HWY 71</h3>
 </div>
@@ -334,7 +335,7 @@
 </div>
 </a>
 <!-- Open Location: West Campus -->
-<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="west-campus.html">
 <div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">West Campus / Rio Grande</h3>
 </div>
@@ -368,7 +369,7 @@
 </div>
 </a>
 <!-- Open Location: Leander -->
-<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="leander.html">
 <div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">Leander</h3>
 </div>
@@ -406,7 +407,7 @@
 </div>
 </a>
 <!-- Open Location: Liberty Hill (Updated) -->
-<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="#">
+<a class="block bg-warm-white rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group" href="liberty-hill.html">
 <div class="bg-brand-orange text-on-primary px-6 py-4 group-hover:bg-primary transition-colors">
 <h3 class="font-headline-md text-headline-md">Liberty Hill</h3>
 </div>
@@ -445,10 +446,10 @@
 </div>
 </a>
 <!-- Under Construction: San Marcos (Updated) -->
-<a class="block bg-warm-white/80 rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group relative" href="#">
+<a class="block bg-warm-white/80 rounded-xl border border-limestone shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow group relative" href="san-marcos.html">
 <div class="bg-primary-fixed-dim text-on-primary-fixed px-6 py-4 group-hover:bg-inverse-primary transition-colors flex justify-between items-center">
 <h3 class="font-headline-md text-headline-md">San Marcos</h3>
-<span class="text-xs font-bold uppercase tracking-widest border border-current px-2 py-1 rounded">Under Construction</span>
+<span class="text-xs font-bold uppercase tracking-widest border border-current px-2 py-1 rounded">Coming Soon</span>
 </div>
 <div class="p-6 flex flex-col flex-grow space-y-4 opacity-80">
 <div class="flex items-start gap-3">
@@ -458,19 +459,19 @@
 </div>
 </a>
 <!-- Coming Soon: Belton, Lorena, Jarrell (Updated) -->
-<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="#">
+<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="belton.html">
 <div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center shadow-sm relative z-10 w-3/4 group-hover:bg-white transition-colors">
 <h3 class="font-headline-lg text-headline-lg text-timber-brown mb-2">Belton</h3>
 <span class="bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-orange/20">Coming Soon</span>
 </div>
 </a>
-<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="#">
+<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="lorena.html">
 <div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center shadow-sm relative z-10 w-3/4 group-hover:bg-white transition-colors">
 <h3 class="font-headline-lg text-headline-lg text-timber-brown mb-2">Lorena</h3>
 <span class="bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-orange/20">Coming Soon</span>
 </div>
 </a>
-<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="#">
+<a class="block rounded-xl border border-limestone shadow-sm overflow-hidden hover:shadow-md transition-shadow group relative min-h-[200px] flex items-center justify-center pattern-bg" href="jarrell.html">
 <div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg text-center shadow-sm relative z-10 w-3/4 group-hover:bg-white transition-colors">
 <h3 class="font-headline-lg text-headline-lg text-timber-brown mb-2">Jarrell</h3>
 <span class="bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-orange/20">Coming Soon</span>
@@ -479,13 +480,7 @@
 </div>
 <!-- Right Column (60% width): Sticky map container -->
 <div class="hidden lg:block w-3/5 relative">
-<div class="sticky top-28 h-[calc(100vh-8rem)] rounded-xl overflow-hidden border border-limestone shadow-sm bg-limestone flex items-center justify-center">
-<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLs56gbkNc3bDXxn_WwHOpckbDUprdXVjUtM6usxY3tik6_fGV9aZ6lP9V6AqX1vY18ElnVHHPsLF_hXIM20mVTWy3T5FSMrTb65-pbFYnhi0_HoVuvNCEN5jZq2KBWaquTQ9in7Hs11ka22WI6X2Vn7z09MFCy2q-_VO_iYfZURRJFkgV4ICV0Uj47NwzDOEezh655-1WkoJI6zSF4vS-owDOK0Z-MJLg8686SmqObUbufDLrx2WCvvpUw');"></div>
-<!-- Placeholder overlay if image is missing -->
-<div class="absolute inset-0 bg-surface-variant/20 flex items-center justify-center pointer-events-none">
-<span class="material-symbols-outlined text-primary text-6xl opacity-50 drop-shadow-md">location_on</span>
-</div>
-</div>
+<div id="map" class="sticky top-28 h-[calc(100vh-8rem)] rounded-xl overflow-hidden border border-limestone shadow-sm w-full min-h-[500px] z-0"></div>
 </div>
 </section>
 </main>
@@ -493,7 +488,7 @@
 <footer class="bg-timber-brown text-warm-white mt-auto">
   <div class="grid grid-cols-1 md:grid-cols-5 gap-stack-lg px-container-margin py-stack-lg max-w-[1280px] mx-auto w-full">
     <div class="col-span-1 md:col-span-1">
-      <img alt="Foodie's Corner Logo" class="w-[140px] h-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGyZddY0VhRF0oXAlGPwo_X3nq20W4ixl67vyvkNf3KDMpCUCQvWBsdE27mcOTVBxprwY8zmhtbTkSCG9io7Pdb3YuOc0WTVXiq14MuBtwh3JHO8x1d77zKGlKS8oVz-K69-B5bSIH7cJpze2US2mY83achhA0N8CkEe2Fe9Xl1gbBjjPiFF2O2efmm7uroV0q_WVm8eWDcD-K41az-Zmwoh54zm7qSqpscifiUIMaX7f2h_9AJuhxN_xV46oH_LSI9nxYpzr8ehA" style="filter: brightness(0) invert(1);">
+      <img alt="Foodie's Corner Logo" class="w-[140px] h-auto mb-4" src="./assets/images/img-42e50b1da695.webp" style="filter: brightness(0) invert(1);">
       <p class="text-limestone/80 text-body-md mb-6 max-w-xs">Premium Convenience &amp; Fresh Food. Elevating the everyday stop into an experience.</p>
       <div class="flex gap-4">
         <a class="text-limestone hover:text-white" href="#"><span class="material-symbols-outlined">face_nod</span></a>
@@ -601,7 +596,7 @@
   <div id="mobile-drawer-panel" class="absolute top-0 right-0 h-full w-[280px] bg-[#fcf9f4] shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col">
     <!-- Header with Close Button -->
     <div class="flex justify-between items-center mb-8">
-      <img alt="Foodie's Corner Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3kwKt5BS58FWcjnzMqTO1LpptqoERqpH6qxAZVYTRRjQyq5owhbwf_nPFWVanuvqZXvLTEuna5TcPQc7UwOrtnhaXdAEeTvv5CW43g6Ajzb8YDljSZh001uY7oRRS8SluYNpiKI5AEQGIQwacSi7f4wjlcOVpscDUGMaK7IJcuYJYRutMTenTosxan3N4XTl0xrIIfJWHi5b9GYoF3W4yMIr36F0Fb_dBEYCWAYycNhRnisWJd3pr3x-5QDSFVwxBSTpqqahNeNEVIA">
+      <img alt="Foodie's Corner Logo" class="h-10 w-auto object-contain" src="./assets/images/img-543088078c80.webp">
       <button id="mobile-drawer-close" aria-label="Close Menu" class="text-timber-brown p-2 hover:opacity-80 transition-all">
         <span class="material-symbols-outlined text-3xl">close</span>
       </button>
@@ -653,6 +648,59 @@
       overlay.addEventListener('click', (e) => {
         if (e.target === overlay) closeMenu();
       });
+    }
+  });
+</script>
+
+<!-- Leaflet JS CDN -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Initialize Leaflet map
+    const map = L.map('map');
+
+    // 2. Add standard OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // 3. Custom SVG Brand Icon in #DD4F05
+    const brandIcon = L.divIcon({
+      className: 'custom-div-icon',
+      html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#DD4F05" width="36px" height="36px" style="filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.3));"><path d="M12 0C7.58 0 4 3.58 4 8c0 5.25 8 16 8 16s8-10.75 8-16c0-4.42-3.58-8-8-8zm0 11.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 4.5 12 4.5 15.5 6.07 15.5 8 13.93 11.5 12 11.5z"/></svg>`,
+      iconSize: [36, 36],
+      iconAnchor: [18, 36],
+      popupAnchor: [0, -32]
+    });
+
+    // 4. Store locations data
+    const locations = [
+      { name: "Cedar Park", coords: [30.514757, -97.849154], link: "cedar-park.html" },
+      { name: "HWY 71", coords: [30.2461883, -97.8881831], link: "hwy-71.html" },
+      { name: "West Campus / Rio Grande", coords: [30.2882068, -97.7450278], link: "west-campus.html" },
+      { name: "Leander", coords: [30.6077945, -97.8598432], link: "leander.html" },
+      { name: "Liberty Hill", coords: [30.672559, -97.881036], link: "liberty-hill.html" }
+    ];
+
+    // 5. Plot markers on the map
+    const markers = [];
+    locations.forEach(loc => {
+      const marker = L.marker(loc.coords, { icon: brandIcon }).addTo(map);
+      marker.bindPopup(`
+        <div style="font-family: 'Hanken Grotesk', sans-serif; padding: 4px; min-width: 120px;">
+          <h4 style="margin: 0 0 6px 0; color: #5D4037; font-size: 15px; font-weight: bold;">${loc.name}</h4>
+          <a href="${loc.link}" style="color: #DD4F05; font-weight: bold; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+            View Details <span style="font-weight: bold;">&rarr;</span>
+          </a>
+        </div>
+      `);
+      markers.push(marker);
+    });
+
+    // 6. Automatically zoom and pan map to fit all markers
+    if (markers.length > 0) {
+      const group = new L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.15));
     }
   });
 </script>
