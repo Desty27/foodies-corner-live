@@ -151,7 +151,7 @@
 <nav class="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
 <a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
 <a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="locations.html">Locations</a>
-<a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="deli.html">Deli</a>
+<a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="deli.html">Kitchen</a>
 <a class="font-display-lg text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="merch.html">Merchandise</a>
 <a class="font-display-lg text-body-md text-primary border-b-2 border-primary pb-1 font-bold" href="careers.html">Careers</a>
 </nav>
@@ -178,9 +178,9 @@
 <div class="glass p-2 rounded-full flex flex-col md:flex-row items-center gap-2 max-w-2xl mx-auto">
 <div class="flex items-center flex-1 w-full pl-6">
 <span class="material-symbols-outlined text-white/70">location_on</span>
-<input class="bg-transparent border-none focus:ring-0 text-white placeholder-white/70 w-full font-label-md" placeholder="Search City, State, or Role" type="text"/>
+<input id="job-search-input" class="bg-transparent border-none focus:ring-0 text-white placeholder-white/70 w-full font-label-md" placeholder="Search City, State, or Role" type="text"/>
 </div>
-<button class="bg-[#DD4F05] text-white font-display-lg font-semibold px-8 py-4 rounded-full hover:bg-primary transition-all w-full md:w-auto shadow-lg active:scale-95">
+<button id="job-search-btn" class="bg-[#DD4F05] text-white font-display-lg font-semibold px-8 py-4 rounded-full hover:bg-primary transition-all w-full md:w-auto shadow-lg active:scale-95">
                 Search Jobs
             </button>
 </div>
@@ -211,105 +211,82 @@
 <h2 class="font-display-lg text-headline-lg text-timber-brown">Available Roles</h2>
 <p class="text-on-surface-variant">Find your place in our growing family.</p>
 </div>
-<a class="text-[#0A7BC3] font-semibold hover:underline hidden md:block" href="careers.html">Browse all 42 jobs</a>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter reveal-group">
+<div class="flex overflow-x-auto gap-gutter pb-8 no-scrollbar snap-x snap-mandatory reveal-group" id="job-cards-container">
 <!-- Job 1 -->
-<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active snap-start shrink-0 w-80 md:w-[400px] job-card">
 <div class="p-6 flex-1">
 <div class="flex justify-between items-start mb-4">
 <h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Team Member</h3>
-<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
 </div>
 <div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-lg">location_on</span>
-<span>Austin, TX</span>
-</div>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-lg">payments</span>
-<span>Competitive + Bonus</span>
+<span>Liberty Hill, TX</span>
 </div>
 </div>
 <p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
                 Start your journey mastering the fundamentals of premium service and hospitality. You'll be the face of Foodie's Corner, ensuring every guest receives a warm welcome and exceptional service while maintaining our high standards of store presentation.
             </p>
 </div>
-<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="team-member.html">Apply Now</a>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest mt-auto" href="team-member.html">Apply Now</a>
 </div>
 <!-- Job 2 -->
-<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active snap-start shrink-0 w-80 md:w-[400px] job-card">
 <div class="p-6 flex-1">
 <div class="flex justify-between items-start mb-4">
 <h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Assistant Manager</h3>
-<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
 </div>
 <div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-lg">location_on</span>
-<span>Austin, TX</span>
-</div>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-lg">payments</span>
-<span>Competitive + Bonus</span>
+<span>Liberty Hill, TX</span>
 </div>
 </div>
 <p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
                 Develop leadership skills and oversee daily operational excellence. You will support the Store Manager in coaching team members, managing inventory, and driving sales while ensuring our premium brand standards are met in every interaction.
             </p>
 </div>
-<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="assistant-manager.html">Apply Now</a>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest mt-auto" href="assistant-manager.html">Apply Now</a>
 </div>
 <!-- Job 3 -->
-<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
-<div class="p-6 flex-1">
-<div class="flex justify-between items-start mb-4">
-<h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Store Manager</h3>
-<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
-</div>
-<div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-lg">location_on</span>
-<span>Austin, TX</span>
-</div>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-lg">payments</span>
-<span>Competitive + Bonus</span>
-</div>
-</div>
-<p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
-                The Store Manager is responsible for the overall operation of Foodie's Corner and is accountable for performance. You will lead a high-performing team, manage P&amp;L, and cultivate a community-focused culture that defines our premium convenience experience.
-            </p>
-</div>
-<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="store-manager.html">Apply Now</a>
-</div>
-<!-- Job 4 -->
-<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active">
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active snap-start shrink-0 w-80 md:w-[400px] job-card">
 <div class="p-6 flex-1">
 <div class="flex justify-between items-start mb-4">
 <h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Deli / Kitchen Member</h3>
-<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Full Time</span>
 </div>
 <div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-lg">location_on</span>
-<span>Austin, TX</span>
-</div>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-lg">payments</span>
-<span>Competitive + Bonus</span>
+<span>Liberty Hill, TX</span>
 </div>
 </div>
 <p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
                 Become a specialist in our craft kitchen, focusing on high-end culinary standards. You will prepare fresh, made-to-order deli items following precise recipes and presentation standards that set Foodie's Corner apart from traditional convenience stores.
             </p>
 </div>
-<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest" href="deli-member.html">Apply Now</a>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest mt-auto" href="deli-member.html">Apply Now</a>
+</div>
+<!-- Job 4 -->
+<div class="reveal bg-white rounded-xl border border-limestone shadow-sm overflow-hidden flex flex-col active snap-start shrink-0 w-80 md:w-[400px] job-card">
+<div class="p-6 flex-1">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display-lg text-headline-md text-timber-brown font-bold">Deli / Kitchen Manager</h3>
+</div>
+<div class="flex gap-4 mb-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Liberty Hill, TX</span>
 </div>
 </div>
-<div class="mt-stack-md md:hidden text-center reveal">
-<a class="text-[#0A7BC3] font-semibold hover:underline" href="careers.html">Browse all 42 jobs</a>
-</div></section>
+<p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                The Deli/Kitchen Manager leads all food production and kitchen operations at Foodies Corner. You will manage daily operations, lead and train kitchen staff to ensure maximum efficiency, and maintain high standards of presentation and recipe compliance.
+            </p>
+</div>
+<a class="block text-center w-full bg-[#DD4F05] text-white font-bold py-4 hover:opacity-90 transition-opacity uppercase tracking-widest mt-auto" href="deli-manager.html">Apply Now</a>
+</div>
+</div>
+</section>
 <!-- Footer -->
 <footer class="bg-timber-brown dark:bg-on-background text-warm-white reveal active">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-container-margin py-stack-lg max-w-[1280px] mx-auto">
@@ -333,7 +310,7 @@
 <li class=""><a class="text-limestone/80 hover:text-warm-white underline decoration-primary transition-all" href="#">Accessibility</a></li>
 </ul>
 </div>
-<div class="space-y-4 md:ml-auto"><h4 class="font-bold text-lg mb-4">Follow Us</h4><div class="space-y-3"><a class="flex items-center gap-2 text-limestone/80 hover:text-warm-white transition-all" href="https://www.instagram.com/foodiescorner.tx/"><span class="material-symbols-outlined text-xl">photo_camera</span><span class="text-sm italic">@foodiescorner.tx</span></a><a class="flex items-center gap-2 text-limestone/80 hover:text-warm-white transition-all" href="https://www.linkedin.com/company/foodie-s-corner/"><span class="material-symbols-outlined text-xl">work</span><span class="text-sm">LinkedIn</span></a></div></div>
+<div class="space-y-4 md:ml-auto"><h4 class="font-bold text-lg mb-4">Follow Us</h4><div class="space-y-3"><a class="flex items-center gap-2 text-limestone/80 hover:text-warm-white transition-all" href="https://www.instagram.com/foodiescorner.tx/"><svg class="w-5 h-5 inline-block align-text-bottom mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg><span class="text-sm italic">@foodiescorner.tx</span></a><a class="flex items-center gap-2 text-limestone/80 hover:text-warm-white transition-all" href="https://www.linkedin.com/company/foodie-s-corner/"><svg class="w-5 h-5 inline-block align-text-bottom mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><span class="text-sm">LinkedIn</span></a></div></div>
 </div>
 <div class="border-t border-white/10 py-8 px-container-margin max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 <p class="text-limestone/60 text-sm">&copy; 2026 Foodie's Corner. All rights reserved.</p>
@@ -382,6 +359,29 @@
                 heroImg.style.transform = `translateY(${scrollPos * 0.4}px)`;
             }
         });
+
+        // Search Bar Indexing / Client-Side Filtering
+        const searchInput = document.getElementById('job-search-input');
+        const searchBtn = document.getElementById('job-search-btn');
+        const jobCards = document.querySelectorAll('.job-card');
+
+        function filterJobs() {
+            const query = searchInput.value.toLowerCase().trim();
+            jobCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                if (title.includes(query) || desc.includes(query)) {
+                    card.style.setProperty('display', 'flex', 'important');
+                } else {
+                    card.style.setProperty('display', 'none', 'important');
+                }
+            });
+        }
+
+        if (searchBtn && searchInput) {
+            searchBtn.addEventListener('click', filterJobs);
+            searchInput.addEventListener('input', filterJobs);
+        }
     });
 </script>
 
@@ -399,7 +399,7 @@
     <!-- Deli -->
     <a href="deli.html" class="flex flex-col items-center gap-1 group">
       <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">restaurant</span>
-      <span class="text-[11px] font-bold text-timber-brown">Deli</span>
+      <span class="text-[11px] font-bold text-timber-brown">Kitchen</span>
     </a>
     <!-- Merch -->
     <a href="merch.html" class="flex flex-col items-center gap-1 group">
@@ -430,7 +430,7 @@
     <nav class="flex flex-col gap-6 font-display-lg text-[22px] font-bold text-timber-brown flex-grow">
       <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Home</a>
       <a href="locations.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Locations</a>
-      <a href="deli.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Deli</a>
+      <a href="deli.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Kitchen</a>
       <a href="merch.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Merchandise</a>
       <a href="careers.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Careers</a>
     </nav>
