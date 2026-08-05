@@ -265,6 +265,7 @@
 <div class="bg-warm-white rounded-xl border border-limestone shadow-[0_8px_30px_rgb(93,64,55,0.08)] p-8" id="application-card">
 <h2 class="font-headline-lg text-headline-lg text-timber-brown mb-6">Apply for this Position</h2>
 <form id="applicationForm" class="space-y-5">
+<input id="position" name="position" type="hidden" value="Deli Team Member"/>
 <div class="grid grid-cols-2 gap-4">
 <div>
 <label class="block font-label-md text-label-md text-on-surface mb-1" for="firstName">First Name <span class="text-error">*</span></label>
@@ -418,6 +419,7 @@
 
             // 3. Construct the payload
             const payload = {
+                position: document.getElementById('position').value,
                 firstName: document.getElementById('firstName').value,
                 lastName: document.getElementById('lastName').value,
                 email: document.getElementById('email').value,
