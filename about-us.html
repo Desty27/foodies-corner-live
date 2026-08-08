@@ -1,0 +1,550 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us - Foodie's Corner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffdbcf",
+                        "tertiary-container": "#0071e9",
+                        "on-background": "#1c1c19",
+                        "on-tertiary-fixed": "#001a40",
+                        "secondary-fixed-dim": "#9acbff",
+                        "tertiary-fixed-dim": "#acc7ff",
+                        "outline-variant": "#e2bfb3",
+                        "inverse-on-surface": "#f3f0eb",
+                        "warm-white": "#FDFCFB",
+                        "secondary-container": "#60b4ff",
+                        "on-primary-fixed": "#380d00",
+                        "inverse-surface": "#31302d",
+                        "primary-fixed-dim": "#ffb59a",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f0ede8",
+                        "charcoal-glass": "#1A1A1A",
+                        "on-primary-fixed-variant": "#802a00",
+                        "secondary": "#00629e",
+                        "surface-bright": "#fcf9f4",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#cd4700",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-container": "#fefcff",
+                        "surface-tint": "#a83900",
+                        "surface-container-high": "#ebe8e3",
+                        "on-primary": "#ffffff",
+                        "outline": "#8e7166",
+                        "on-surface-variant": "#5a4138",
+                        "tertiary": "#0059ba",
+                        "surface-variant": "#e5e2dd",
+                        "limestone": "#E5E0D8",
+                        "surface": "#fcf9f4",
+                        "inverse-primary": "#ffb59a",
+                        "on-surface": "#1c1c19",
+                        "tertiary-fixed": "#d7e2ff",
+                        "on-secondary-fixed-variant": "#004a79",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dcdad5",
+                        "background": "#fcf9f4",
+                        "on-tertiary-fixed-variant": "#004492",
+                        "on-error": "#ffffff",
+                        "timber-brown": "#5D4037",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2dd",
+                        "surface-container-low": "#f6f3ee",
+                        "secondary-fixed": "#cfe5ff",
+                        "error": "#ba1a1a",
+                        "primary": "#a43700",
+                        "on-secondary-fixed": "#001d34",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#004470",
+                        "foodies-orange": "#DD4F05",
+                        "pale-sky-blue": "#e1f5fe",
+                        "soft-mint-green": "#e8f5e9",
+                        "warm-peach": "#fbe9e7",
+                        "muted-lilac": "#f3e5f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "stack-md": "24px",
+                        "container-margin": "20px",
+                        "base": "4px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Dynamic Header Scroll Behavior */
+        .header-container {
+            transition: transform 0.3s ease-in-out;
+            will-change: transform;
+        }
+        .header-hidden {
+            transform: translateY(-100%);
+        }
+
+        .hero-text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Timeline Animations */
+        .timeline-line {
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform 1.5s ease-out;
+        }
+        .timeline-line.visible {
+            transform: scaleY(1);
+        }
+
+        .timeline-item {
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .timeline-item.left {
+            transform: translateX(-50px);
+        }
+        .timeline-item.right {
+            transform: translateX(50px);
+        }
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .timeline-dot {
+            transition: background-color 0.5s ease, border-color 0.5s ease, transform 0.3s ease;
+        }
+        .timeline-item.visible .timeline-dot {
+            background-color: theme('colors.primary');
+            border-color: theme('colors.surface-container-lowest');
+            transform: scale(1.1) translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Utility Bar & Navigation Wrapper for Dynamic Scroll -->
+<div class="header-container fixed top-0 left-0 w-full z-50" id="sticky-header-wrapper">
+<!-- Top Utility Bar -->
+<div class="bg-timber-brown text-warm-white py-2 px-container-margin hidden md:block">
+<div class="max-w-7xl mx-auto flex justify-end items-center font-label-sm text-label-sm">
+<div class="flex items-center gap-6">
+<a class="hover:text-primary-fixed transition-colors" href="about-us.html">About Us</a>
+<a class="hover:text-primary-fixed transition-colors" href="careers.html">Careers</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+<!-- Main Navigation (TopNavBar Component) -->
+<header class="bg-surface/90 backdrop-blur-md border-b border-limestone shadow-sm w-full">
+<div class="flex flex-col w-full max-w-7xl mx-auto px-container-margin py-4">
+<div class="flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex-shrink-0" href="index.html">
+<img alt="Foodie's Corner Logo" class="h-16 w-auto object-contain" src="./assets/images/img-543088078c80.webp">
+</a>
+<!-- Desktop Navigation & Actions -->
+<div class="hidden md:flex items-center gap-8">
+<nav aria-label="Main Navigation" class="flex items-center gap-8">
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="deli.html">Kitchen</a>
+<a class="text-on-surface text-[20px] font-bold font-headline-lg hover:text-primary transition-colors duration-200" href="merch.html">Merch</a>
+</nav>
+<a class="border border-foodies-orange bg-foodies-orange text-warm-white font-label-md text-label-md px-6 py-3 rounded hover:bg-white hover:text-foodies-orange transition-colors duration-300 shadow-sm inline-flex items-center gap-2" href="locations.html">
+                        Find a Store
+                    </a>
+</div>
+<!-- Mobile Menu Button -->
+<button aria-label="Open Menu" class="md:hidden text-on-surface p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+</div>
+<!-- Spacer to prevent content from jumping under fixed header -->
+<div class="h-16 md:h-28"></div>
+
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center bg-inverse-surface overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTRkF01tQmhqBbMTB84sYW8D5_2O-CSGLJKaxbp6FzAowNiXspaorJ6PezDnf3ZC6KBlqmWjzsY9wUfiuxHnnEct7ur5qGamE78vlms7HvJUjTZutp2cRtVX6uFj-8KP7U0-xTb6H-Wg25Dus0dnoOXaXfzQz_SLfP-ObayWWiTzXZyKjv0PmkXk_VxLWaVUE9Uhur3JHKEebMkfmG19fGmNAlGnpFGXudQVOn6WZt_lGg2I2ETX-_J6ENQJFJwBeFLms-BE3o2ITpBQ");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-container-margin max-w-4xl mx-auto flex flex-col gap-stack-md">
+<h1 class="text-display-lg font-display-lg text-warm-white">Built on people, not just convenience.</h1>
+<p class="text-body-lg font-body-lg text-surface-container-low max-w-2xl mx-auto">A great convenience store is built on more than just convenience. It's built on people, relationships, and the communities we serve. As a family-owned business, that's something we value deeply.</p>
+</div>
+</section>
+
+<!-- Values & Communities Bento -->
+<section class="py-stack-lg px-container-margin max-w-[1280px] mx-auto bg-warm-peach/30 rounded-3xl mt-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Communities -->
+<div class="bg-surface rounded-xl p-stack-md border border-limestone flex flex-col gap-stack-md shadow-sm border-t-4 border-t-soft-mint-green">
+<div class="flex gap-2 flex-wrap">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider border border-primary/20">Founded in Texas</span>
+<span class="bg-timber-brown/10 text-timber-brown px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider border border-timber-brown/20">Family-Owned</span>
+</div>
+<h2 class="text-headline-lg font-headline-lg text-timber-brown">Proudly Serving these communities</h2>
+<ul class="grid grid-cols-2 gap-y-4 gap-x-2 text-body-lg font-body-lg text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Austin HWY 71</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Cedar Park</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Leander</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Liberty Hill</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Austin West Campus</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> San Marcos</li>
+</ul>
+</div>
+<!-- Values -->
+<div class="bg-timber-brown text-warm-white rounded-xl p-stack-md flex flex-col justify-center gap-stack-sm shadow-sm relative overflow-hidden border-b-4 border-b-pale-sky-blue">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="diversity_3">diversity_3</span>
+</div>
+<h2 class="text-headline-lg font-headline-lg relative z-10">Wherever you find a Foodie's Corner, our goal stays the same.</h2>
+<p class="text-body-lg font-body-lg text-surface-container-low relative z-10">To make your visit easy and enjoyable, whether you're grabbing a quick meal, filling up your tank, picking up essentials, or simply stopping in to say hello.</p>
+</div>
+</div>
+</section>
+
+<!-- Origin Story -->
+<section class="py-stack-lg px-container-margin bg-muted-lilac/20 my-stack-md">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="flex flex-col gap-stack-md order-2 lg:order-1">
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Where it started</span>
+<h2 class="text-headline-lg font-headline-lg text-timber-brown">It all started at Whitestone.</h2>
+</div>
+<div class="text-body-lg font-body-lg text-on-surface-variant flex flex-col gap-4">
+<p class="">Over 25 years ago, our journey began not as owners, but as employees learning every aspect of the business from the ground up.</p>
+<p class="">We mopped floors, stocked shelves, and learned that true service means remembering a regular's name and anticipating their needs. Those early days at the Whitestone location laid the foundation for everything Foodie's Corner is today.</p>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<figure class="rounded-xl overflow-hidden shadow-sm border-4 border-white bg-surface transform rotate-2">
+<img alt="Original Whitestone store exterior" class="w-full h-auto object-cover aspect-[4/3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN_qdbDKcaIDy09m7Oxw-oeQt6_2f-tLqfxpbKbcDAvqfDRtb4ogEJow0DNf_pQnx95KhGoklFfk3a2byqV81xgaOHrzAaqS6Q2nDMt9Ns54ds_iszpvwfZjbBJqkc-DHqv-O7nEUZ1VJl8tg_yqScXuGfojkLzi9kE0YG8hugDWHUP8gDCteoKTgo9GYwj-b8IDFkT7y9U6Xb9sziK10IhgxW8q_x1mVoosuy9irHDJDSeaV34mD39yHWAqmIWJPNSA"/>
+<figcaption class="p-4 text-center text-label-sm font-label-sm text-on-surface-variant border-t border-limestone bg-warm-white">
+                            Where it all began. Our original store.
+                        </figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- Timeline -->
+<section class="py-stack-lg px-container-margin max-w-[1280px] mx-auto bg-pale-sky-blue/10 rounded-3xl mb-stack-lg pt-12 pb-16 overflow-hidden">
+<div class="text-center mb-stack-lg">
+<h2 class="text-headline-lg font-headline-lg text-timber-brown uppercase tracking-widest text-label-sm font-label-sm">The Road So Far</h2>
+<h3 class="text-display-lg font-display-lg text-timber-brown mt-2">From one store to a Growing brand</h3>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl mx-auto">Every stop along the way built the store you visit today.</p>
+<div class="h-1 w-24 bg-primary mx-auto mt-6 rounded-full"></div>
+</div>
+<div class="relative max-w-4xl mx-auto" id="timeline-container">
+<!-- Timeline Line -->
+<div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-timber-brown/10 rounded-full timeline-line" id="timeline-line"></div>
+<div class="flex flex-col gap-stack-lg relative z-10">
+<!-- 1999 -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item left">
+<div class="md:w-5/12 text-left md:text-right pl-12 md:pl-0 w-full">
+<h3 class="text-headline-md font-headline-md text-timber-brown group-hover:text-primary transition-colors">1999</h3>
+</div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-soft-mint-green flex items-center justify-center border-4 border-white timeline-dot shadow-sm z-10">
+</div>
+<div class="md:w-5/12 w-full pl-12 md:pl-0">
+<div class="text-left bg-soft-mint-green/30 p-6 rounded-xl border border-soft-mint-green shadow-sm transform transition-transform group-hover:-translate-y-1">
+<h4 class="text-body-lg font-body-lg text-timber-brown font-semibold mb-2">Learning the business</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">It began with working the stores as an employee - learning the business one shift at a time, from the ground up.</p>
+</div>
+</div>
+</div>
+<!-- 2007 -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item right">
+<div class="md:w-5/12 w-full pl-12 md:pl-0 order-3 md:order-1">
+<div class="text-left md:text-right bg-warm-peach/30 p-6 rounded-xl border border-warm-peach shadow-sm transform transition-transform group-hover:-translate-y-1">
+<h4 class="text-body-lg font-body-lg text-timber-brown font-semibold mb-2">Whitestone</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">The store we'd eventually own, and the one that's proudly served its community for more than 25 years.</p>
+</div>
+</div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-warm-peach flex items-center justify-center border-4 border-white timeline-dot shadow-sm z-10 order-2">
+</div>
+<div class="md:w-5/12 text-left pl-12 md:pl-0 w-full order-1 md:order-3">
+<h3 class="text-headline-md font-headline-md text-timber-brown group-hover:text-primary transition-colors">2007</h3>
+</div>
+</div>
+<!-- 2020 -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item left">
+<div class="md:w-5/12 text-left md:text-right pl-12 md:pl-0 w-full">
+<h3 class="text-headline-md font-headline-md text-timber-brown group-hover:text-primary transition-colors">2020</h3>
+</div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-muted-lilac flex items-center justify-center border-4 border-white timeline-dot shadow-sm z-10">
+</div>
+<div class="md:w-5/12 w-full pl-12 md:pl-0">
+<div class="text-left bg-muted-lilac/30 p-6 rounded-xl border border-muted-lilac shadow-sm transform transition-transform group-hover:-translate-y-1">
+<h4 class="text-body-lg font-body-lg text-timber-brown font-semibold mb-2">Foodie's Corner is born</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">The name evolved into the next chapter of our journey. The commitment to clean, reliable, friendly stores never did.</p>
+</div>
+</div>
+</div>
+<!-- 2026 -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item right">
+<div class="md:w-5/12 w-full pl-12 md:pl-0 order-3 md:order-1">
+<div class="text-left md:text-right bg-pale-sky-blue/30 p-6 rounded-xl border border-pale-sky-blue shadow-md transform transition-transform group-hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5"></div>
+<h4 class="text-body-lg font-body-lg text-primary font-bold mb-2 relative z-10">First Flagship Store</h4>
+<p class="text-body-md font-body-md text-on-surface-variant relative z-10">Built our first flagship store in Liberty Hill with plans for more growth and locations.</p>
+</div>
+</div>
+<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-pale-sky-blue flex items-center justify-center border-4 border-white timeline-dot shadow-md z-10 order-2">
+<span class="material-symbols-outlined text-timber-brown group-hover:text-primary transition-colors text-[20px]" data-icon="star" data-weight="fill">star</span>
+</div>
+<div class="md:w-5/12 text-left pl-12 md:pl-0 w-full order-1 md:order-3">
+<h3 class="text-headline-md font-headline-md text-primary font-bold">2026</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Gratitude & CTA -->
+<section class="py-stack-lg px-container-margin bg-inverse-surface text-warm-white text-center">
+<div class="max-w-3xl mx-auto flex flex-col gap-stack-md items-center">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="favorite">favorite</span>
+<h3 class="text-display-lg font-display-lg">THANK YOU</h3>
+<p class="text-body-lg font-body-lg text-surface-container-low">
+                    Our team is what makes Foodie's Corner special. We're grateful for the employees who serve our customers every day, and for the communities that have welcomed us as we've grown. Thank you for being part of our story. We look forward to serving you and your community for many years to come.
+                </p>
+<p class="text-headline-md font-headline-md text-primary-fixed mt-4">
+                    Join us in the journey as we grow by fueling connections and elevating experiences.
+                </p>
+<a class="mt-stack-sm inline-block bg-primary text-on-primary px-8 py-3 rounded font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm" href="locations.html">
+                    Find Your Nearest Store
+                </a>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-timber-brown dark:bg-charcoal-glass full-width bg-timber-brown border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-7xl mx-auto px-container-margin py-stack-lg md:gap-12 lg:grid-cols-4">
+<!-- Column 1: Brand & Copyright -->
+<div class="flex flex-col gap-6">
+<a href="index.html"><img alt="Foodie's Corner Logo" class="w-48 h-auto object-contain filter brightness-0 invert" src="./assets/images/img-e100ea2b95c9.webp"></a>
+<p class="font-body-md text-body-md text-warm-white/80 mt-2 max-w-xs">Premium Convenience &amp; Fresh Food. Elevating the everyday stop into an experience.</p>
+<p class="font-label-sm text-label-sm text-limestone/60 mt-auto">
+                    &copy; 2026 Foodie's Corner. All rights reserved.
+                </p>
+</div>
+<!-- Column 2: Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Company</h4>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="about-us.html">About Us</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="careers.html">Careers</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Contact Us</a>
+</div>
+<!-- Column 3: Services -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Services</h4>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="locations.html">Locations</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="deli.html">Picante Kitchen</a>
+</div>
+<!-- Column 4: Legal -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Legal</h4>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Privacy Policy</a>
+<a class="text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all duration-300" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2 font-bold">Follow Us</h4>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-2 text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all" href="https://www.instagram.com/foodiescorner.tx/"><svg class="w-5 h-5 inline-block align-text-bottom mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg> @foodiescorner.tx</a>
+<a class="flex items-center gap-2 text-limestone/80 font-body-md hover:text-primary-fixed-dim transition-all" href="https://www.linkedin.com/company/foodie-s-corner/"><svg class="w-5 h-5 inline-block align-text-bottom mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Spacer to prevent content from being hidden behind sticky bottom nav on mobile -->
+<div class="h-20 md:hidden"></div>
+
+<!-- Mobile Sticky Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-limestone md:hidden">
+  <div class="flex justify-around items-center py-3 px-2">
+    <!-- Home -->
+    <a href="index.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">home</span>
+      <span class="text-[11px] font-bold text-timber-brown">Home</span>
+    </a>
+    <!-- Kitchen -->
+    <a href="deli.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">restaurant</span>
+      <span class="text-[11px] font-bold text-timber-brown">Kitchen</span>
+    </a>
+    <!-- Merch -->
+    <a href="merch.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+      <span class="text-[11px] font-bold text-timber-brown">Merch</span>
+    </a>
+    <!-- Stores -->
+    <a href="locations.html" class="flex flex-col items-center gap-1 group">
+      <span class="material-symbols-outlined text-[24px] text-timber-brown" style="font-variation-settings: 'FILL' 0;">location_on</span>
+      <span class="text-[11px] font-bold text-timber-brown">Stores</span>
+    </a>
+  </div>
+</div>
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-drawer-overlay" class="fixed inset-0 z-50 bg-[#1c1c19]/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+  <div id="mobile-drawer-panel" class="absolute top-0 right-0 h-full w-[280px] bg-[#fcf9f4] shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Header with Close Button -->
+    <div class="flex justify-between items-center mb-8">
+      <a href="index.html"><img alt="Foodie's Corner Logo" class="h-10 w-auto object-contain" src="./assets/images/img-543088078c80.webp"></a>
+      <button id="mobile-drawer-close" aria-label="Close Menu" class="text-timber-brown p-2 hover:opacity-80 transition-all">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    
+    <!-- Navigation Links -->
+    <nav class="flex flex-col gap-6 font-display-lg text-[22px] font-bold text-timber-brown flex-grow">
+      <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Home</a>
+      <a href="locations.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Locations</a>
+      <a href="deli.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Kitchen</a>
+      <a href="merch.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Merchandise</a>
+      <a href="careers.html" class="hover:text-primary transition-colors py-2 border-b border-limestone/40">Careers</a>
+    </nav>
+
+    <!-- Drawer Footer Actions -->
+    <div class="mt-auto">
+      <a href="locations.html" class="block w-full text-center bg-foodies-orange text-white font-bold py-4 rounded-lg hover:bg-primary-container transition-all">
+        Find a Store
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mobile drawer script
+  document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+    const overlay = document.getElementById('mobile-drawer-overlay');
+    const panel = document.getElementById('mobile-drawer-panel');
+
+    function openMenu() {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+    }
+
+    function closeMenu() {
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('translate-x-full');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeMenu();
+      });
+    }
+  });
+
+  // Header Scroll Behavior
+  let lastScrollY = window.scrollY;
+  const header = document.getElementById('sticky-header-wrapper');
+
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 150) {
+          header.classList.add('header-hidden');
+      } else {
+          header.classList.remove('header-hidden');
+      }
+      lastScrollY = window.scrollY;
+  });
+
+  // Timeline Scroll Animation
+  document.addEventListener('DOMContentLoaded', () => {
+      const timelineLine = document.getElementById('timeline-line');
+      const timelineContainer = document.getElementById('timeline-container');
+      const timelineItems = document.querySelectorAll('.timeline-item');
+
+      const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.2
+      };
+
+      const lineObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  timelineLine.classList.add('visible');
+              }
+          });
+      }, { threshold: 0.1 });
+
+      if (timelineContainer) {
+          lineObserver.observe(timelineContainer);
+      }
+
+      const itemObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                  // Unobserve after animating in
+                  itemObserver.unobserve(entry.target);
+              }
+          });
+      }, observerOptions);
+
+      timelineItems.forEach(item => {
+          itemObserver.observe(item);
+      });
+  });
+</script>
+
+</body></html>
