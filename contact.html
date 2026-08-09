@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>About Us - Foodie's Corner</title>
+<title>Contact Us - Foodie's Corner</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -65,15 +65,14 @@
                         "on-secondary": "#ffffff",
                         "on-secondary-container": "#004470",
                         "foodies-orange": "#DD4F05",
-                        "pale-sky-blue": "#e1f5fe",
-                        "soft-mint-green": "#e8f5e9",
-                        "warm-peach": "#fbe9e7",
-                        "muted-lilac": "#f3e5f5"
+                        "pale-sky-blue": "#E3F2FD",
+                        "warm-peach": "#FFECB3"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
                         "lg": "0.5rem",
                         "xl": "0.75rem",
+                        "2xl": "1rem",
                         "full": "9999px"
                     },
                     "spacing": {
@@ -82,7 +81,8 @@
                         "stack-md": "24px",
                         "container-margin": "20px",
                         "base": "4px",
-                        "stack-lg": "48px"
+                        "stack-lg": "48px",
+                        "section": "80px"
                     },
                     "fontFamily": {
                         "body-md": ["Hanken Grotesk"],
@@ -125,46 +125,12 @@
             transform: translateY(-100%);
         }
 
-        .hero-text-shadow {
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Timeline Animations */
-        .timeline-line {
-            transform-origin: top;
-            transform: scaleY(0);
-            transition: transform 1.5s ease-out;
-        }
-        .timeline-line.visible {
-            transform: scaleY(1);
-        }
-
-        .timeline-item {
-            opacity: 0;
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .timeline-item.left {
-            transform: translateX(-50px);
-        }
-        .timeline-item.right {
-            transform: translateX(50px);
-        }
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .timeline-dot {
-            transition: background-color 0.5s ease, border-color 0.5s ease, transform 0.3s ease;
-        }
-        .timeline-item.visible .timeline-dot {
-            background-color: theme('colors.primary');
-            border-color: theme('colors.surface-container-lowest');
-            transform: scale(1.1) translateX(-50%);
+        .ambient-shadow {
+            box-shadow: 0 10px 30px -10px rgba(93, 64, 55, 0.08);
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
 <!-- Top Utility Bar & Navigation Wrapper for Dynamic Scroll -->
 <div class="header-container fixed top-0 left-0 w-full z-50" id="sticky-header-wrapper">
 <!-- Top Utility Bar -->
@@ -206,161 +172,121 @@
 <!-- Spacer to prevent content from jumping under fixed header -->
 <div class="h-16 md:h-28"></div>
 
-<main>
+<main class="flex-grow">
 <!-- Hero Section -->
-<section class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center bg-inverse-surface overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center opacity-40" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTRkF01tQmhqBbMTB84sYW8D5_2O-CSGLJKaxbp6FzAowNiXspaorJ6PezDnf3ZC6KBlqmWjzsY9wUfiuxHnnEct7ur5qGamE78vlms7HvJUjTZutp2cRtVX6uFj-8KP7U0-xTb6H-Wg25Dus0dnoOXaXfzQz_SLfP-ObayWWiTzXZyKjv0PmkXk_VxLWaVUE9Uhur3JHKEebMkfmG19fGmNAlGnpFGXudQVOn6WZt_lGg2I2ETX-_J6ENQJFJwBeFLms-BE3o2ITpBQ");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface to-transparent"></div>
-</div>
-<div class="relative z-10 text-center px-container-margin max-w-4xl mx-auto flex flex-col gap-stack-md">
-<h1 class="text-display-lg font-display-lg text-warm-white">Built on people, not just convenience.</h1>
-<p class="text-body-lg font-body-lg text-surface-container-low max-w-2xl mx-auto">A great convenience store is built on more than just convenience. It's built on people, relationships, and the communities we serve. As a family-owned business, that's something we value deeply.</p>
-</div>
-</section>
-
-<!-- Values & Communities Bento -->
-<section class="py-stack-lg px-container-margin max-w-[1280px] mx-auto bg-warm-peach/30 rounded-3xl mt-stack-md">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<!-- Communities -->
-<div class="bg-surface rounded-xl p-stack-md border border-limestone flex flex-col gap-stack-md shadow-sm border-t-4 border-t-soft-mint-green">
-<div class="flex gap-2 flex-wrap">
-<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider border border-primary/20">Founded in Texas</span>
-<span class="bg-timber-brown/10 text-timber-brown px-3 py-1 rounded-full text-label-sm font-label-sm uppercase tracking-wider border border-timber-brown/20">Family-Owned</span>
-</div>
-<h2 class="text-headline-lg font-headline-lg text-timber-brown">Proudly Serving these communities</h2>
-<ul class="grid grid-cols-2 gap-y-4 gap-x-2 text-body-lg font-body-lg text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Austin HWY 71</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Cedar Park</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Leander</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Liberty Hill</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> Austin West Campus</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" data-weight="fill">location_on</span> San Marcos</li>
-</ul>
-</div>
-<!-- Values -->
-<div class="bg-timber-brown text-warm-white rounded-xl p-stack-md flex flex-col justify-center gap-stack-sm shadow-sm relative overflow-hidden border-b-4 border-b-pale-sky-blue">
-<div class="absolute top-0 right-0 p-8 opacity-10">
-<span class="material-symbols-outlined text-9xl" data-icon="diversity_3">diversity_3</span>
-</div>
-<h2 class="text-headline-lg font-headline-lg relative z-10">Wherever you find a Foodie's Corner, our goal stays the same.</h2>
-<p class="text-body-lg font-body-lg text-surface-container-low relative z-10">To make your visit easy and enjoyable, whether you're grabbing a quick meal, filling up your tank, picking up essentials, or simply stopping in to say hello.</p>
-</div>
-</div>
-</section>
-
-<!-- Origin Story -->
-<section class="py-stack-lg px-container-margin bg-muted-lilac/20 my-stack-md">
-<div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
-<div class="flex flex-col gap-stack-md order-2 lg:order-1">
-<div class="flex flex-col gap-2">
-<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Where it started</span>
-<h2 class="text-headline-lg font-headline-lg text-timber-brown">It all started at Whitestone.</h2>
-</div>
-<div class="text-body-lg font-body-lg text-on-surface-variant flex flex-col gap-4">
-<p class="">Over 25 years ago, our journey began not as owners, but as employees learning every aspect of the business from the ground up.</p>
-<p class="">We mopped floors, stocked shelves, and learned that true service means remembering a regular's name and anticipating their needs. Those early days at the Whitestone location laid the foundation for everything Foodie's Corner is today.</p>
-</div>
-</div>
-<div class="order-1 lg:order-2">
-<figure class="rounded-xl overflow-hidden shadow-sm border-4 border-white bg-surface transform rotate-2">
-<img alt="Original Whitestone store exterior" class="w-full h-auto object-cover aspect-[4/3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN_qdbDKcaIDy09m7Oxw-oeQt6_2f-tLqfxpbKbcDAvqfDRtb4ogEJow0DNf_pQnx95KhGoklFfk3a2byqV81xgaOHrzAaqS6Q2nDMt9Ns54ds_iszpvwfZjbBJqkc-DHqv-O7nEUZ1VJl8tg_yqScXuGfojkLzi9kE0YG8hugDWHUP8gDCteoKTgo9GYwj-b8IDFkT7y9U6Xb9sziK10IhgxW8q_x1mVoosuy9irHDJDSeaV34mD39yHWAqmIWJPNSA"/>
-<figcaption class="p-4 text-center text-label-sm font-label-sm text-on-surface-variant border-t border-limestone bg-warm-white">
-                            Where it all began. Our original store.
-                        </figcaption>
-</figure>
-</div>
-</div>
-</section>
-
-<!-- Timeline -->
-<section class="py-stack-lg px-container-margin max-w-[1280px] mx-auto bg-pale-sky-blue/10 rounded-3xl mb-stack-lg pt-12 pb-16 overflow-hidden">
-<div class="text-center mb-stack-lg">
-<h2 class="text-headline-lg font-headline-lg text-timber-brown uppercase tracking-widest text-label-sm font-label-sm">The Road So Far</h2>
-<h3 class="text-display-lg font-display-lg text-timber-brown mt-2">From one store to a Growing brand</h3>
-<p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl mx-auto">Every stop along the way built the store you visit today.</p>
-<div class="h-1 w-24 bg-primary mx-auto mt-6 rounded-full"></div>
-</div>
-<div class="relative max-w-4xl mx-auto" id="timeline-container">
-<!-- Timeline Line -->
-<div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-timber-brown/10 rounded-full timeline-line" id="timeline-line"></div>
-<div class="flex flex-col gap-stack-lg relative z-10">
-<!-- 1999 -->
-<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item left">
-<div class="md:w-5/12 text-left md:text-right pl-12 md:pl-0 w-full">
-<h3 class="text-headline-md font-headline-md text-timber-brown group-hover:text-primary transition-colors">1999</h3>
-</div>
-<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-soft-mint-green flex items-center justify-center border-4 border-white timeline-dot shadow-sm z-10">
-</div>
-<div class="md:w-5/12 w-full pl-12 md:pl-0">
-<div class="text-left bg-soft-mint-green/30 p-6 rounded-xl border border-soft-mint-green shadow-sm transform transition-transform group-hover:-translate-y-1">
-<h4 class="text-body-lg font-body-lg text-timber-brown font-semibold mb-2">Learning the business</h4>
-<p class="text-body-md font-body-md text-on-surface-variant">It began with working the stores as an employee - learning the business one shift at a time, from the ground up.</p>
-</div>
-</div>
-</div>
-<!-- 2007 -->
-<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item right">
-<div class="md:w-5/12 w-full pl-12 md:pl-0 order-3 md:order-1">
-<div class="text-left md:text-right bg-warm-peach/30 p-6 rounded-xl border border-warm-peach shadow-sm transform transition-transform group-hover:-translate-y-1">
-<h4 class="text-body-lg font-body-lg text-timber-brown font-semibold mb-2">Whitestone</h4>
-<p class="text-body-md font-body-md text-on-surface-variant">The store we'd eventually own, and the one that's proudly served its community for more than 25 years.</p>
-</div>
-</div>
-<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-warm-peach flex items-center justify-center border-4 border-white timeline-dot shadow-sm z-10 order-2">
-</div>
-<div class="md:w-5/12 text-left pl-12 md:pl-0 w-full order-1 md:order-3">
-<h3 class="text-headline-md font-headline-md text-timber-brown group-hover:text-primary transition-colors">2007</h3>
-</div>
-</div>
-<!-- 2020 -->
-<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item left">
-<div class="md:w-5/12 text-left md:text-right pl-12 md:pl-0 w-full">
-<h3 class="text-headline-md font-headline-md text-timber-brown group-hover:text-primary transition-colors">2020</h3>
-</div>
-<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-muted-lilac flex items-center justify-center border-4 border-white timeline-dot shadow-sm z-10">
-</div>
-<div class="md:w-5/12 w-full pl-12 md:pl-0">
-<div class="text-left bg-muted-lilac/30 p-6 rounded-xl border border-muted-lilac shadow-sm transform transition-transform group-hover:-translate-y-1">
-<h4 class="text-body-lg font-body-lg text-timber-brown font-semibold mb-2">Foodie's Corner is born</h4>
-<p class="text-body-md font-body-md text-on-surface-variant">The name evolved into the next chapter of our journey. The commitment to clean, reliable, friendly stores never did.</p>
-</div>
-</div>
-</div>
-<!-- 2026 -->
-<div class="flex flex-col md:flex-row items-center justify-between gap-gutter w-full group timeline-item right">
-<div class="md:w-5/12 w-full pl-12 md:pl-0 order-3 md:order-1">
-<div class="text-left md:text-right bg-pale-sky-blue/30 p-6 rounded-xl border border-pale-sky-blue shadow-md transform transition-transform group-hover:-translate-y-1 relative overflow-hidden">
-<div class="absolute inset-0 bg-primary/5"></div>
-<h4 class="text-body-lg font-body-lg text-primary font-bold mb-2 relative z-10">First Flagship Store</h4>
-<p class="text-body-md font-body-md text-on-surface-variant relative z-10">Built our first flagship store in Liberty Hill with plans for more growth and locations.</p>
-</div>
-</div>
-<div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-pale-sky-blue flex items-center justify-center border-4 border-white timeline-dot shadow-md z-10 order-2">
-<span class="material-symbols-outlined text-timber-brown group-hover:text-primary transition-colors text-[20px]" data-icon="star" data-weight="fill">star</span>
-</div>
-<div class="md:w-5/12 text-left pl-12 md:pl-0 w-full order-1 md:order-3">
-<h3 class="text-headline-md font-headline-md text-primary font-bold">2026</h3>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Gratitude & CTA -->
-<section class="py-stack-lg px-container-margin bg-inverse-surface text-warm-white text-center">
-<div class="max-w-3xl mx-auto flex flex-col gap-stack-md items-center">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="favorite">favorite</span>
-<h3 class="text-display-lg font-display-lg">THANK YOU</h3>
-<p class="text-body-lg font-body-lg text-surface-container-low">
-                    Our team is what makes Foodie's Corner special. We're grateful for the employees who serve our customers every day, and for the communities that have welcomed us as we've grown. Thank you for being part of our story. We look forward to serving you and your community for many years to come.
+<section class="bg-[#E3F2FD] py-16 px-container-margin relative overflow-hidden">
+<!-- Decorative subtle pattern/texture for premium feel -->
+<div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiM1RDQwMzciIGZpbGwtb3BhY2l0eT0iMC41Ii8+PC9zdmc+')]"></div>
+<div class="max-w-[800px] mx-auto text-center relative z-10">
+<h1 class="font-display-lg text-display-lg text-timber-brown mb-4 font-bold">Contact Us</h1>
+<p class="font-body-lg text-body-lg text-timber-brown/80 max-w-2xl mx-auto">
+                    Got a question, some feedback, or just want to say howdy? We'd love to hear from you!
                 </p>
-<p class="text-headline-md font-headline-md text-primary-fixed mt-4">
-                    Join us in the journey as we grow by fueling connections and elevating experiences.
-                </p>
-<a class="mt-stack-sm inline-block bg-primary text-on-primary px-8 py-3 rounded font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm" href="locations.html">
-                    Find Your Nearest Store
-                </a>
+</div>
+</section>
+
+<!-- Main Content -->
+<section class="bg-background py-16 px-container-margin relative z-20 -mt-10">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Contact Form Area -->
+<div class="md:col-span-7 bg-[#FFECB3] rounded-3xl p-6 md:p-8 ambient-shadow relative overflow-hidden">
+<!-- Abstract shape decoration -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 rounded-full bg-white/20 blur-3xl pointer-events-none"></div>
+<div class="bg-warm-white rounded-2xl p-6 md:p-8 relative z-10 ambient-shadow">
+<!-- Success Card Container -->
+<div id="success-card" class="hidden flex flex-col items-center justify-center py-12 text-center">
+  <div class="w-16 h-16 rounded-full bg-soft-mint-green text-primary flex items-center justify-center mb-6">
+    <span class="material-symbols-outlined text-4xl">check_circle</span>
+  </div>
+  <h3 class="text-2xl font-bold text-timber-brown mb-4">Thanks for reaching out!</h3>
+  <p class="text-body-md text-on-surface-variant max-w-sm">We've received your submission and we'll get back to you shortly.</p>
+  <button id="send-another" class="mt-8 bg-timber-brown hover:bg-timber-brown/90 text-white font-bold px-6 py-2 rounded-full transition-all">Send Another Message</button>
+</div>
+
+<!-- Contact Form -->
+<form id="contact-form" class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-timber-brown" for="name">Name <span class="text-error">*</span></label>
+<input class="rounded-lg border border-limestone bg-warm-white text-on-surface px-4 py-3 focus:border-foodies-orange focus:ring-1 focus:ring-foodies-orange outline-none transition-colors" id="name" name="name" placeholder="Jane Doe" type="text" required>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-timber-brown" for="email">Email <span class="text-error">*</span></label>
+<input class="rounded-lg border border-limestone bg-warm-white text-on-surface px-4 py-3 focus:border-foodies-orange focus:ring-1 focus:ring-foodies-orange outline-none transition-colors" id="email" name="email" placeholder="jane@example.com" type="email" required>
+</div>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-timber-brown" for="phone">Phone (Optional)</label>
+<input class="rounded-lg border border-limestone bg-warm-white text-on-surface px-4 py-3 focus:border-foodies-orange focus:ring-1 focus:ring-foodies-orange outline-none transition-colors" id="phone" name="phone" placeholder="(555) 123-4567" type="tel">
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-timber-brown" for="reason">How can we help? <span class="text-error">*</span></label>
+<select class="rounded-lg border border-limestone bg-warm-white text-on-surface px-4 py-3 focus:border-foodies-orange focus:ring-1 focus:ring-foodies-orange outline-none transition-colors appearance-none" id="reason" name="reason" required>
+<option value="" disabled selected>Select an option...</option>
+<option value="General Question">General Question</option>
+<option value="Suggestion or Feedback">Suggestion or Feedback</option>
+<option value="Location Related">Location Related (Please mention location in message below)</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-timber-brown" for="message">Message <span class="text-error">*</span></label>
+<textarea class="rounded-lg border border-limestone bg-warm-white text-on-surface px-4 py-3 focus:border-foodies-orange focus:ring-1 focus:ring-foodies-orange outline-none transition-colors resize-y" id="message" name="message" placeholder="Tell us what's on your mind..." rows="5" required></textarea>
+</div>
+
+<!-- Inline error block -->
+<div id="error-message" class="hidden bg-error-container text-on-error-container p-4 rounded-lg flex items-center gap-2">
+  <span class="material-symbols-outlined text-[20px]">error</span>
+  <p class="text-sm font-medium">Something went wrong. Please check your network and try again.</p>
+</div>
+
+<button id="submit-btn" class="w-full md:w-auto bg-[#DD4F05] text-white font-label-md text-label-md font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-foodies-orange/30 active:translate-y-0 flex items-center justify-center gap-2" type="submit">
+  <span>Send Message</span>
+  <svg id="spinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+  </svg>
+</button>
+</form>
+</div>
+</div>
+<!-- Contact Info Sidebar -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<!-- Location Card -->
+<div class="bg-limestone/30 rounded-2xl p-6 border border-limestone ambient-shadow flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shrink-0 text-foodies-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-timber-brown mb-1 font-bold">Headquarters</h3>
+<p class="font-body-md text-body-md text-timber-brown/80 leading-relaxed">
+                                    1487 N HWY 183<br>
+                                    Liberty Hill, Texas 78642
+                                </p>
+</div>
+</div>
+<!-- Email Card -->
+<div class="bg-limestone/30 rounded-2xl p-6 border border-limestone ambient-shadow flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shrink-0 text-foodies-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-timber-brown mb-1 font-bold">Email Us</h3>
+<a class="font-body-md text-body-md text-foodies-orange hover:underline transition-all" href="mailto:admin@foodiescorner.com">
+                                    admin@foodiescorner.com
+                                </a>
+</div>
+</div>
+<!-- Visual Anchor (Image/Atmosphere) -->
+<div class="flex-grow rounded-2xl overflow-hidden min-h-[200px] relative ambient-shadow group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIz1DH7tsN74kQDZFsi_Ss1wxK2T3CkBNvdO7QgWp62G2nYrWWbv3zw8yoaHUH0T6iKfQr3HDFZG7C2DYPznHFTnDvOk7p7XRWL2z1Ip1oMrPUIaohNxdNLWXSS4ZjWJMf-HFndpWsxOgIjOj3XmxTVfeQhkBSu1nxqjzDTqM4dy6pJ7dj5Og-OKIgSvciJOoyoM0SRRvpMsaFGBG-z2NBhWTcZi-K1eDi0xm0sz7vRdrevAUpuCT_H1jD3XGC_cMF_vJAxt_05YI4Wg">
+<div class="absolute inset-0 bg-gradient-to-t from-timber-brown/80 to-transparent flex items-end p-6">
+<p class="font-headline-md text-headline-md text-white font-bold">We're here for you.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 </main>
@@ -464,6 +390,9 @@
 </div>
 
 <script>
+  // Replace with deployment URL when deployed
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxQGdUp7tAhb3lBlRY4y4zmpCBd2-1wtoxNVz-6JVXoSu7htvDsRoa6HOBAmn91qQrH/exec';
+
   // Mobile drawer script
   document.addEventListener('DOMContentLoaded', () => {
     const openBtn = document.getElementById('mobile-menu-btn');
@@ -507,43 +436,77 @@
       lastScrollY = window.scrollY;
   });
 
-  // Timeline Scroll Animation
+  // Contact Form Submission & Google Sheets Integration
   document.addEventListener('DOMContentLoaded', () => {
-      const timelineLine = document.getElementById('timeline-line');
-      const timelineContainer = document.getElementById('timeline-container');
-      const timelineItems = document.querySelectorAll('.timeline-item');
+    const form = document.getElementById('contact-form');
+    const successCard = document.getElementById('success-card');
+    const sendAnotherBtn = document.getElementById('send-another');
+    const submitBtn = document.getElementById('submit-btn');
+    const spinner = document.getElementById('spinner');
+    const errorBlock = document.getElementById('error-message');
 
-      const observerOptions = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.2
-      };
+    if (!form) return;
 
-      const lineObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  timelineLine.classList.add('visible');
-              }
-          });
-      }, { threshold: 0.1 });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-      if (timelineContainer) {
-          lineObserver.observe(timelineContainer);
+      // Clear previous error
+      errorBlock.classList.add('hidden');
+
+      // Double check validity (handled by HTML5 constraint validation)
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
       }
 
-      const itemObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-                  // Unobserve after animating in
-                  itemObserver.unobserve(entry.target);
-              }
-          });
-      }, observerOptions);
+      // Show spinner & disable button
+      submitBtn.disabled = true;
+      spinner.classList.remove('hidden');
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
-      timelineItems.forEach(item => {
-          itemObserver.observe(item);
+      // Get values
+      const formData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim() || 'N/A',
+        reason: form.reason.value,
+        message: form.message.value.trim(),
+        timestamp: new Date().toISOString()
+      };
+
+      // Asynchronous POST request using JSON string with text/plain content type (no preflight check) and no-cors mode
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'text/plain'
+        }
+      })
+      .then(response => {
+        // Since we are using no-cors mode, the response is opaque. We assume successful submission once the fetch resolves.
+        form.reset();
+        form.classList.add('hidden');
+        successCard.classList.remove('hidden');
+      })
+      .catch(error => {
+        console.error('Submission error:', error);
+        errorBlock.classList.remove('hidden');
+      })
+      .finally(() => {
+        // Reset loader
+        submitBtn.disabled = false;
+        spinner.classList.add('hidden');
+        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
       });
+    });
+
+    if (sendAnotherBtn) {
+      sendAnotherBtn.addEventListener('click', () => {
+        successCard.classList.add('hidden');
+        form.classList.remove('hidden');
+      });
+    }
   });
 </script>
 
